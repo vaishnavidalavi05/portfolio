@@ -915,13 +915,16 @@ button {
 
 .portfolio-thumb-wrap {
   width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  background-color: #EFE8E1;
+  background-color: #1A1A1A;
   position: relative;
 }
 .portfolio-thumb-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.6s var(--ease-hudson);
 }
