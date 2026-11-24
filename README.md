@@ -1,61 +1,93 @@
-# Vaishnavi M Dalavi — Premium Developer Portfolio
+# Vaishnavi M Dalavi — Hudson Portfolio
 
-A modern, premium, animated developer portfolio website for **Vaishnavi M Dalavi**, 1st-year MCA student at **Poornaprajna Institute of Management (PIM)**, Udupi, Karnataka.
+A complete, authentic redesign of **Vaishnavi M Dalavi's** personal developer portfolio inspired by the visual theme, typography, editorial spacing, and layout of the **Hudson** portfolio template by StyleShout on ThemeWagon.
 
-Inspired by the visual design style, generous editorial layout, micro-interactions, and animations of **Hudson**, tailored uniquely to showcase Vaishnavi's authentic academic rigor, technical competencies, and real projects.
-
-Live Deployment: [vaishnavi-d.vercel.app](https://vaishnavi-d.vercel.app/)  
+Live Website: [vaishnavi-d.vercel.app](https://vaishnavi-d.vercel.app/)  
 GitHub Repository: [github.com/vaishnavidalavi05/portfolio](https://github.com/vaishnavidalavi05/portfolio)
 
 ---
 
-## ✨ Design Architecture & Visual Style
+## 🏛️ Hudson Visual Architecture & Styling
 
-- **Dark Obsidian & Radiant Ember Palette:** Built on deep obsidian black (`#09090C`), rich charcoal cards (`#14141B` / `#1B1B25`), crisp white typography (`#F8FAFC`), and subtle ember orange accents (`#FF6B2B` / `#F97316`).
-- **Editorial Typography Scale:** Uses **Syne** for bold display headings, **Plus Jakarta Sans** for body text, and **Space Grotesk** for code and technical tags.
-- **Hudson Asymmetric Editorial Layout:** Clean layout with generous spacing, prominent indices (`00`, `01`, `02`), and asymmetric project cards.
-- **Subtle Theme Switcher:** Features a smooth dark/light mode toggle with preference persistence in `localStorage`.
-
----
-
-## 🎬 Animations & Interactive Features
-
-1. **Smooth Preloader Screen:** Minimalist monogram countdown (`00%` &rarr; `100%`) with progress bar and seamless reveal.
-2. **Scroll Progress Indicator:** Real-time gradient progress bar at the top of the viewport.
-3. **Interactive Custom Cursor:** Smooth lagging circular cursor with hover scale on interactive elements (automatically disabled on mobile/touch).
-4. **Hero Dynamic Role Typewriter:** Rotates through key identities (*Aspiring Software Developer*, *1st Year MCA Student*, *Web Application Creator*, *Relational DB Enthusiast*).
-5. **Scroll-Triggered Reveals:** IntersectionObserver triggers smooth fade-up transitions for sections and cards.
-6. **Animated Underline Navigation:** Sticky glassmorphic navbar with dynamic sliding indicator on hover and scrollspy tracking.
-7. **Interactive Skills Bento:** Animated progress meters that fill smoothly when scrolled into view, with verified evaluation standards.
-8. **Asymmetric Project Showcase:** Interactive browser mockup frame simulating the live Catering Management System admin dashboard with real-time billing calculations.
-9. **Interactive Modals:** Detailed project specs modal and a printable resume modal with a 1-click **Print / Save as PDF** feature.
-10. **One-Click Clipboard Touchpoints:** Instant copy buttons for email (`vdalavi005@gmail.com`) and phone (`+91 7899420886`) with toast feedback.
+- **Editorial Light Palette:** Pure white (`#FFFFFF`), natural warm off-white (`#F9F8F6`), deep black headings (`#151515`), and subtle terracotta accents (`#C95A34`).
+- **Classic Hudson Typography Pairing:**
+  - **Headings & Display:** *Castoro* (editorial serif typeface).
+  - **Body & Interface:** *Public Sans* (clean grotesque sans-serif).
+  - **Technical Meta & Accents:** *Space Grotesk*.
+- **Generous White Space:** Spacious editorial layouts with structured indices (`01 / Introduction`, `02 / Credentials`, `03 / Competencies`, `04 / Work`, `05 / Contact`).
+- **Minimalist Restraint:** No tacky neon glowing cards or dashboard widgets; pure, dignified developer portfolio aesthetic.
 
 ---
 
-## 📂 Project Structure
+## 📑 Recreated Sections & Navigation Hierarchy
 
-```text
-c:\Users\vdala\resume\
-├── index.html          # Semantic HTML5 document with Hudson editorial sections
-├── css\
-│   └── style.css       # Obsidian dark theme, design tokens, micro-interactions, print styles
-├── js\
-│   └── main.js         # Preloader, cursor, scroll progress, typewriter, filters, modals
-├── assets\             # Directory for assets and icons
-├── .gitignore          # Git ignore rules
-└── README.md           # Documentation and preview instructions
-```
+1. **Hudson Navigation Bar:**
+   - Left brand mark: `vaishnavi.`
+   - Right navigation links: `Home`, `About`, `Resume`, `Portfolio`, `Contact`
+   - Animated underline hover effect and scrollspy active state tracking
+   - Sticky navigation with header elevation upon scrolling
+   - Minimalist mobile drawer menu
+
+2. **Hero Section:**
+   - Large hero typography: *"Hello, I'm Vaishnavi M Dalavi."*
+   - Kicker: `Developer & MCA Candidate · PIM Udupi`
+   - Professional introduction & tagline
+   - Call-to-action buttons: *"View My Work"*, *"Get In Touch"*, and *"Download Resume"*
+   - Framed portrait artwork (`assets/profile-portrait.svg`) with Hudson-style captioning
+   - Meta details: Location (`Udupi, Karnataka`), Degree (`MCA 2026–2028`), Current Focus
+
+3. **About Section:**
+   - Two-column editorial composition
+   - Pull quote: *"Building solid foundations in computer applications through practical implementation, clean architecture, and authentic curiosity."*
+   - Narrative detailing MCA studies at **Poornaprajna Institute of Management (PIM)**
+   - Authentic personal statement and philosophy box
+   - Student Profile Dossier specification table with spoken languages (*English*, *Kannada*, *Hindi*)
+
+4. **Resume / Experience Section:**
+   - Hudson timeline format with large clean typography
+   - Formal graduate education at **Poornaprajna Institute of Management (PIM)** (2026–2028)
+   - Specialization in Computer Applications & Software Development
+   - Career Trajectory: Target roles (*Software Developer*, *Web Developer*), short-term learning goals, and long-term vision
+
+5. **Skills Section:**
+   - Minimalist Hudson grid (no flashy progress bars)
+   - Honest verified proficiency levels (*Basic* vs *Beginner*):
+     - **Core Programming:** Python (Basic), Java (Basic)
+     - **Web Fundamentals:** HTML5 (Basic), CSS3 (Beginner), JavaScript (Beginner)
+     - **Backend & Storage:** Flask (Beginner), SQLite (Beginner), MySQL (Beginner)
+     - **Tools & Workflows:** GitHub / Git (Basic), Visual Studio Code (Beginner)
+     - **Data Science & CS Core:** NumPy (Basic), OOP (Basic), Data Structures & Algorithms (Beginner)
+
+6. **Portfolio / Projects Gallery:**
+   - Clean gallery grid with large project thumbnails (`assets/project-catering.svg`, `assets/project-algo.svg`)
+   - Interactive zoom on hover
+   - Category filters: `All Work`, `Completed Projects`, `Web Development`, `Academic Roadmap`
+   - Project: **Catering Management System** with problem solved, tech stack, and full architecture modal
+   - Academic Roadmap: **Full-Stack Application & Algorithm Visualizer**
+
+7. **Philosophy Showcase:**
+   - Editorial quote section representing academic engineering ethos:
+     *"Code is not merely instructions for machines—it is the translation of human thought into reliable tools. In software engineering, discipline, curiosity, and continuous refinement are everything."*
+
+8. **Contact Section:**
+   - Direct touchpoints with 1-click clipboard copy for email (`vdalavi005@gmail.com`) and phone (`+91 7899420886`) with toast feedback
+   - Social links: GitHub and LinkedIn
+   - Minimalist message form generating pre-formatted `mailto:` links
+
+9. **Footer:**
+   - Clean typography, social links, back-to-top button, and PIM Udupi acknowledgment
+
+10. **Printable Resume Modal:**
+    - Recruiter-ready printable CV with a 1-click **Print / Save as PDF** feature (`@media print` optimized)
 
 ---
 
-## 💻 How to Preview Locally
+## 💻 Local Preview & Verification
 
-Open `index.html` directly in any modern browser, or launch a lightweight local server:
+Open `index.html` in any browser or launch a local server:
 
 ```bash
-# In the project directory:
 python -m http.server 8080
 ```
 
-Then visit [http://localhost:8080](http://localhost:8080) in your web browser.
+Then navigate to [http://localhost:8080](http://localhost:8080).

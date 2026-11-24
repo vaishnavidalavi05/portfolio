@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650">
+  <defs>
+    <linearGradient id="projBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F7F5"/>
+      <stop offset="100%" stop-color="#EFE9E2"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="125%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#1A1817" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="650" fill="url(#projBg)"/>
+
+  <!-- Minimal Decorative Grid Lines -->
+  <line x1="60" y1="0" x2="60" y2="650" stroke="#E2DACF" stroke-width="1"/>
+  <line x1="840" y1="0" x2="840" y2="650" stroke="#E2DACF" stroke-width="1"/>
+  <line x1="0" y1="60" x2="900" y2="60" stroke="#E2DACF" stroke-width="1"/>
+  
+  <text x="90" y="42" font-family="'Public Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="3" fill="#A89B8F">CASE STUDY / 01</text>
+  <text x="810" y="42" text-anchor="end" font-family="'Public Sans', sans-serif" font-size="11" font-weight="600" letter-spacing="2" fill="#A89B8F">WEB APPLICATION &middot; FLASK &amp; SQLITE</text>
+
+  <!-- Browser Window Mockup -->
+  <g transform="translate(110, 100)" filter="url(#cardShadow)">
+    <!-- Browser Chrome -->
+    <rect width="680" height="460" rx="8" fill="#FFFFFF" stroke="#E0D7CD" stroke-width="1"/>
+    <path d="M0 0 H680 V44 H0 Z" fill="#F4EFE9" rx="8"/>
+    <rect x="0" y="36" width="680" height="8" fill="#F4EFE9"/>
+    
+    <!-- Dots -->
+    <circle cx="24" cy="22" r="5" fill="#E08272"/>
+    <circle cx="40" cy="22" r="5" fill="#E8B868"/>
+    <circle cx="56" cy="22" r="5" fill="#78B88C"/>
+
+    <rect x="180" y="12" width="320" height="20" rx="4" fill="#FFFFFF" stroke="#E2DAD1"/>
+    <text x="340" y="26" text-anchor="middle" font-family="'Public Sans', sans-serif" font-size="10" fill="#998A7D">catering-system.local / dashboard</text>
+
+    <!-- Browser Body: Clean Editorial UI Layout -->
+    <rect x="36" y="70" width="160" height="8" rx="2" fill="#2E2824"/>
+    <rect x="36" y="86" width="220" height="5" rx="2" fill="#9C8E82"/>
+
+    <!-- 3 Summary Metrics -->
+    <g transform="translate(36, 115)">
+      <rect width="180" height="74" rx="4" fill="#FBF9F7" stroke="#ECE4DA"/>
+      <text x="16" y="28" font-family="'Public Sans', sans-serif" font-size="9" font-weight="600" fill="#8C7D70">ACTIVE BANQUET ORDERS</text>
+      <text x="16" y="56" font-family="'Castoro', serif" font-size="24" fill="#221C18">18 Bookings</text>
+    </g>
+
+    <g transform="translate(230, 115)">
+      <rect width="180" height="74" rx="4" fill="#FBF9F7" stroke="#ECE4DA"/>
+      <text x="16" y="28" font-family="'Public Sans', sans-serif" font-size="9" font-weight="600" fill="#8C7D70">MONTHLY REVENUE</text>
+      <text x="16" y="56" font-family="'Castoro', serif" font-size="24" fill="#221C18">&#8377; 84,500</text>
+    </g>
+
+    <g transform="translate(424, 115)">
+      <rect width="220" height="74" rx="4" fill="#FBF9F7" stroke="#ECE4DA"/>
+      <text x="16" y="28" font-family="'Public Sans', sans-serif" font-size="9" font-weight="600" fill="#8C7D70">DATABASE ENGINE</text>
+      <text x="16" y="56" font-family="'Castoro', serif" font-size="22" fill="#221C18">SQLite Relational</text>
+    </g>
+
+    <!-- Order Item Calculation Table -->
+    <g transform="translate(36, 215)">
+      <rect width="608" height="205" rx="4" fill="#FDFBF9" stroke="#E8E0D5"/>
+      <path d="M0 0 H608 V36 H0 Z" fill="#F3EDE5"/>
+      <text x="20" y="23" font-family="'Public Sans', sans-serif" font-size="10" font-weight="700" fill="#4A4038">ORDER ITEM / EVENT</text>
+      <text x="320" y="23" font-family="'Public Sans', sans-serif" font-size="10" font-weight="700" fill="#4A4038">GUESTS</text>
+      <text x="440" y="23" font-family="'Public Sans', sans-serif" font-size="10" font-weight="700" fill="#4A4038">GST (5%)</text>
+      <text x="540" y="23" font-family="'Public Sans', sans-serif" font-size="10" font-weight="700" fill="#4A4038">TOTAL</text>
+
+      <line x1="0" y1="76" x2="608" y2="76" stroke="#EDE5DC"/>
+      <text x="20" y="62" font-family="'Public Sans', sans-serif" font-size="12" font-weight="600" fill="#28221D">Grand South Indian Feast &middot; Dinner</text>
+      <text x="320" y="62" font-family="'Public Sans', sans-serif" font-size="12" fill="#6E6257">120 Pax</text>
+      <text x="440" y="62" font-family="'Public Sans', sans-serif" font-size="12" fill="#6E6257">+ &#8377;1,200</text>
+      <text x="540" y="62" font-family="'Public Sans', sans-serif" font-size="12" font-weight="700" fill="#221B17">&#8377;25,200</text>
+
+      <line x1="0" y1="116" x2="608" y2="116" stroke="#EDE5DC"/>
+      <text x="20" y="102" font-family="'Public Sans', sans-serif" font-size="12" font-weight="600" fill="#28221D">Corporate Refreshments &middot; Luncheon</text>
+      <text x="320" y="102" font-family="'Public Sans', sans-serif" font-size="12" fill="#6E6257">60 Pax</text>
+      <text x="440" y="102" font-family="'Public Sans', sans-serif" font-size="12" fill="#6E6257">+ &#8377;450</text>
+      <text x="540" y="102" font-family="'Public Sans', sans-serif" font-size="12" font-weight="700" fill="#221B17">&#8377;9,450</text>
+
+      <line x1="0" y1="156" x2="608" y2="156" stroke="#EDE5DC"/>
+      <text x="20" y="142" font-family="'Public Sans', sans-serif" font-size="12" font-weight="600" fill="#28221D">Traditional Sweets &amp; Evening Snacks</text>
+      <text x="320" y="142" font-family="'Public Sans', sans-serif" font-size="12" fill="#6E6257">180 Pax</text>
+      <text x="440" y="142" font-family="'Public Sans', sans-serif" font-size="12" fill="#6E6257">+ &#8377;620</text>
+      <text x="540" y="142" font-family="'Public Sans', sans-serif" font-size="12" font-weight="700" fill="#221B17">&#8377;13,020</text>
+      
+      <rect x="20" y="172" width="86" height="20" rx="3" fill="#E8F4EC"/>
+      <text x="63" y="186" text-anchor="middle" font-family="'Public Sans', sans-serif" font-size="9" font-weight="700" fill="#2E7548">AUTO BILLED</text>
+    </g>
+  </g>
+</svg>

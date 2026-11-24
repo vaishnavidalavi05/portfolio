@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4EFEB"/>
+      <stop offset="100%" stop-color="#EAE3DC"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8BEAC"/>
+      <stop offset="100%" stop-color="#D9A894"/>
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F1A17"/>
+      <stop offset="100%" stop-color="#120F0D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="1000" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Editorial Geometric Elements -->
+  <circle cx="680" cy="220" r="160" fill="#E2D8CE" opacity="0.6"/>
+  <rect x="60" y="80" width="120" height="1" fill="#C2B4A3" opacity="0.8"/>
+  <text x="60" y="60" font-family="'Public Sans', sans-serif" font-size="12" font-weight="600" letter-spacing="4" fill="#8C7E72">PORTRAIT / VAISHNAVI</text>
+
+  <!-- Portrait Silhouette / Minimalist Editorial Art -->
+  <g transform="translate(400, 520)">
+    <!-- Back Hair Flow -->
+    <path d="M-110 -180 C-170 -110 -180 80 -140 220 C-110 260 -60 280 -20 280 C60 280 120 250 150 200 C170 80 160 -120 110 -180 Z" fill="url(#hairGrad)"/>
+    
+    <!-- Shoulders & Coat -->
+    <path d="M-220 340 C-200 240 -120 200 -50 210 L50 210 C120 200 200 240 220 340 L260 480 L-260 480 Z" fill="url(#coatGrad)"/>
+    
+    <!-- White Collared Shirt -->
+    <path d="M-50 210 L0 300 L50 210 L25 210 L0 260 L-25 210 Z" fill="#FFFFFF"/>
+    <path d="M-25 210 L0 260 L25 210 L10 205 L0 230 L-10 205 Z" fill="#F0EBE5"/>
+
+    <!-- Neck -->
+    <path d="M-45 100 L45 100 L40 215 L-40 215 Z" fill="url(#skinGrad)"/>
+    <path d="M-40 180 C-10 210 10 210 40 180 L40 215 L-40 215 Z" fill="#C99783" opacity="0.4"/>
+
+    <!-- Head / Face Oval -->
+    <path d="M-80 -60 C-80 -160 80 -160 80 -60 C80 50 65 140 0 145 C-65 140 -80 50 -80 -60 Z" fill="url(#skinGrad)"/>
+
+    <!-- Hair Front / Style -->
+    <path d="M-95 -80 C-95 -200 95 -200 95 -80 C95 -10 80 20 75 40 C65 -30 40 -120 -5 -120 C-50 -120 -70 -20 -85 50 C-90 30 -95 0 -95 -80 Z" fill="url(#hairGrad)"/>
+    <path d="M-85 10 C-65 80 -60 160 -50 200 C-58 170 -65 110 -75 50 Z" fill="url(#hairGrad)"/>
+    <path d="M85 10 C65 80 60 160 50 200 C58 170 65 110 75 50 Z" fill="url(#hairGrad)"/>
+
+    <!-- Minimalist Features -->
+    <!-- Eyes/Brows -->
+    <path d="M-50 -35 Q-32 -48 -15 -36" stroke="#2B1E17" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M15 -36 Q32 -48 50 -35" stroke="#2B1E17" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-32" cy="-24" rx="4" ry="5" fill="#2B1E17"/>
+    <ellipse cx="32" cy="-24" rx="4" ry="5" fill="#2B1E17"/>
+
+    <!-- Nose Line -->
+    <path d="M0 -30 L-2 20 L8 24" stroke="#B87F6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Lips -->
+    <path d="M-22 68 Q0 60 22 68 Q0 84 -22 68 Z" fill="#B35848"/>
+    <path d="M-20 68 Q0 73 20 68" stroke="#7A2E22" stroke-width="1.5" fill="none"/>
+
+    <!-- Small Minimalist Gold Earring Studs -->
+    <circle cx="-82" cy="0" r="4" fill="#C99738"/>
+    <circle cx="82" cy="0" r="4" fill="#C99738"/>
+  </g>
+
+  <!-- Editorial Framing & Watermark -->
+  <rect x="30" y="30" width="740" height="940" fill="none" stroke="#D3C7BA" stroke-width="1" opacity="0.6"/>
+  <text x="60" y="930" font-family="'Castoro', serif" font-size="22" font-style="italic" fill="#2A2421">Vaishnavi M Dalavi</text>
+  <text x="740" y="930" text-anchor="end" font-family="'Public Sans', sans-serif" font-size="11" font-weight="600" letter-spacing="2" fill="#8C7E72">PIM UDUPI &middot; 2026</text>
+</svg>

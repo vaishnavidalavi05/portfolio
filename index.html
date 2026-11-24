@@ -1,115 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO Metadata -->
-  <title>Vaishnavi M Dalavi | Software Developer & MCA Student | PIM Udupi</title>
-  <meta name="title" content="Vaishnavi M Dalavi | Software Developer & MCA Student | PIM Udupi">
-  <meta name="description" content="Portfolio of Vaishnavi M Dalavi, 1st Year MCA student at Poornaprajna Institute of Management (PIM) Udupi specializing in software development, web engineering, and database architecture.">
-  <meta name="keywords" content="Vaishnavi M Dalavi, Vaishnavi Dalavi, MCA Portfolio, Poornaprajna Institute of Management, PIM Udupi, Software Developer, Full Stack Developer, Catering Management System, Python, Flask, SQLite, Java">
+  <title>Vaishnavi M Dalavi — Software Developer &amp; MCA Student | PIM Udupi</title>
+  <meta name="title" content="Vaishnavi M Dalavi — Software Developer &amp; MCA Student | PIM Udupi">
+  <meta name="description" content="Personal portfolio of Vaishnavi M Dalavi, 1st Year MCA student at Poornaprajna Institute of Management (PIM) Udupi. Clean software engineering, web technologies, and database architecture.">
+  <meta name="keywords" content="Vaishnavi M Dalavi, Vaishnavi Dalavi, Hudson Portfolio, MCA Student, Poornaprajna Institute of Management, PIM Udupi, Software Developer, Web Developer, Python, Java, Flask, SQLite">
   <meta name="author" content="Vaishnavi M Dalavi">
   <meta name="robots" content="index, follow">
 
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/vaishnavidalavi05/portfolio">
-  <meta property="og:title" content="Vaishnavi M Dalavi | Developer Portfolio">
-  <meta property="og:description" content="1st Year MCA student at PIM Udupi. Explore verified technical skills, full-stack projects, and academic trajectory.">
-  <meta property="og:site_name" content="Vaishnavi M Dalavi — Developer Portfolio">
+  <meta property="og:url" content="https://vaishnavi-d.vercel.app/">
+  <meta property="og:title" content="Vaishnavi M Dalavi — Developer Portfolio">
+  <meta property="og:description" content="1st Year MCA student at PIM Udupi specializing in software development, web engineering, and database systems.">
+  <meta property="og:site_name" content="Vaishnavi M Dalavi">
 
   <!-- Mobile Theme Color -->
-  <meta name="theme-color" content="#09090C" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#FAF9F6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#FFFFFF">
 
-  <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (Body), Space Grotesk (Accents) -->
+  <!-- Google Fonts: Castoro (Headings) and Public Sans (Body) — Iconic Hudson Pairing -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Public+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ==========================================================================
-       ACCESSIBILITY & INTERACTIVE ELEMENTS
-       ========================================================================== -->
   <!-- Skip to Main Content Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Top Scroll Progress Indicator -->
   <div id="scrollProgressBar" class="scroll-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Page scroll progress"></div>
 
-  <!-- Custom Interactive Cursor (Desktop) -->
-  <div id="cursorDot" class="custom-cursor-dot" aria-hidden="true"></div>
-  <div id="cursorCircle" class="custom-cursor-circle" aria-hidden="true"></div>
-
-  <!-- Preloader Screen -->
-  <div id="preloader" class="preloader" aria-hidden="true">
-    <div class="preloader-content">
-      <div class="preloader-monogram">VD<span>.</span></div>
-      <div class="preloader-bar-wrap">
-        <div id="preloaderBar" class="preloader-bar-fill"></div>
-      </div>
-      <div id="preloaderCounter" class="preloader-counter">00%</div>
-    </div>
-  </div>
-
   <!-- ==========================================================================
-       STICKY MINIMALIST NAVIGATION (Hudson Style)
+       NAVIGATION BAR (Hudson Minimalist Style)
        ========================================================================== -->
   <header id="siteHeader" class="site-header" role="banner">
-    <div class="container header-container">
-      <!-- Brand Logo -->
-      <a href="#hero" class="brand-logo" aria-label="Vaishnavi - Return to Top">
-        vaishnavi<span class="brand-dot">.</span>
+    <div class="container header-inner">
+      <!-- Brand Name Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Vaishnavi - Home">
+        vaishnavi<span>.</span>
       </a>
 
-      <!-- Minimalist Navigation Anchor Links with Indices -->
+      <!-- Hudson Desktop Navigation Links -->
       <nav class="desktop-nav" aria-label="Primary Navigation">
-        <a href="#hero" class="nav-link active"><span>00</span>Home</a>
-        <a href="#about" class="nav-link"><span>01</span>About</a>
-        <a href="#skills" class="nav-link"><span>02</span>Skills</a>
-        <a href="#projects" class="nav-link"><span>03</span>Projects</a>
-        <a href="#education" class="nav-link"><span>04</span>Education</a>
-        <a href="#contact" class="nav-link"><span>05</span>Contact</a>
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Header Controls: Theme Switcher & Resume CTA -->
+      <!-- Header Actions -->
       <div class="header-actions">
-        <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
-          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button type="button" class="btn-nav-resume btn-open-resume-modal" aria-label="View Printable Curriculum Vitae">
+          View CV
         </button>
 
-        <!-- Resume CTA Button -->
-        <button type="button" class="btn-header-resume btn-open-resume-modal" aria-label="View Printable Curriculum Vitae">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-          </svg>
-          Resume
-        </button>
-
-        <!-- Mobile Drawer Hamburger Toggle -->
-        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open mobile navigation menu" aria-expanded="false" type="button">
+        <!-- Mobile Toggle Button -->
+        <button id="mobileMenuBtn" class="mobile-toggle-btn" aria-label="Open mobile navigation" aria-expanded="false" type="button">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -120,32 +75,31 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <!-- Mobile Drawer Menu -->
+  <div id="drawerOverlay" class="mobile-drawer-overlay" aria-hidden="true"></div>
   <aside id="mobileDrawer" class="mobile-drawer" aria-label="Mobile Navigation Menu">
     <div>
-      <div class="drawer-header">
-        <a href="#hero" class="brand-logo" aria-label="Vaishnavi - Return to Top">
-          vaishnavi<span class="brand-dot">.</span>
+      <div class="drawer-head">
+        <a href="#hero" class="brand-logo" aria-label="Vaishnavi - Home">
+          vaishnavi<span>.</span>
         </a>
-        <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close navigation menu" type="button">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <button id="drawerCloseBtn" class="mobile-toggle-btn" aria-label="Close navigation" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
       <nav class="drawer-nav" aria-label="Mobile Links">
-        <a href="#hero" class="nav-link"><span>00</span>Home</a>
-        <a href="#about" class="nav-link"><span>01</span>About</a>
-        <a href="#skills" class="nav-link"><span>02</span>Skills</a>
-        <a href="#projects" class="nav-link"><span>03</span>Projects</a>
-        <a href="#education" class="nav-link"><span>04</span>Education</a>
-        <a href="#contact" class="nav-link"><span>05</span>Contact</a>
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
-    <div style="padding-top: 24px; border-top: 1px solid var(--c-border); display: flex; flex-direction: column; gap: 14px;">
-      <button type="button" class="btn-primary btn-open-resume-modal" style="width: 100%; justify-content: center;">
+    <div style="padding-top: 24px; border-top: 1px solid var(--c-border); display: flex; flex-direction: column; gap: 12px;">
+      <button type="button" class="btn-hudson-primary btn-open-resume-modal" style="width: 100%; justify-content: center;">
         View Resume / CV
       </button>
       <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-text-muted); text-align: center;">
@@ -160,466 +114,382 @@
   <main id="main-content">
 
     <!-- ========================================================================
-         HERO SECTION: Full-Screen Editorial Dark Hero (Hudson Style)
+         HERO SECTION: Hudson Editorial Showcase
          ======================================================================== -->
-    <section id="hero" class="hero-section" aria-label="Hero Section">
-      <!-- Ambient Visual Background Grids and Glow -->
-      <div class="hero-ambient-glow" aria-hidden="true"></div>
-      <div class="hero-grid-pattern" aria-hidden="true"></div>
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Typography & CTAs -->
+          <div class="hero-content">
+            <span class="hero-kicker reveal-fade-up">Developer &amp; MCA Candidate &middot; PIM Udupi</span>
+            
+            <h1 class="hero-heading reveal-fade-up delay-1">
+              Hello, I'm <em>Vaishnavi M Dalavi</em>.
+            </h1>
 
-      <div class="container hero-container">
-        <!-- Left Hero Column: Typography & CTAs -->
-        <div class="hero-content">
-          <!-- Top Meta Status Bar -->
-          <div class="hero-meta-bar reveal-fade-up">
-            <span class="hero-status-pill">
-              <span class="pulse-dot" aria-hidden="true"></span>
-              1st Year MCA Student &middot; Open to Opportunities
-            </span>
-            <span class="hero-location-pill">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              Udupi, Karnataka
-            </span>
-          </div>
+            <p class="hero-tagline reveal-fade-up delay-2">
+              An aspiring software developer &amp; 1st-year MCA student at <strong>Poornaprajna Institute of Management (PIM)</strong> in Udupi, Karnataka. Focused on building maintainable software architectures, clean web applications, and relational database systems.
+            </p>
 
-          <!-- Eyebrow Tag -->
-          <p class="hero-eyebrow reveal-fade-up reveal-stagger-1">Hello &amp; Welcome</p>
-
-          <!-- Large Display Name with Smooth Fade-up / Reveal -->
-          <h1 class="hero-title reveal-fade-up reveal-stagger-2">
-            Hi, I'm <span class="name-highlight">Vaishnavi M Dalavi</span>
-          </h1>
-
-          <!-- Animated Dynamic Role Switcher -->
-          <div class="hero-role-wrapper reveal-fade-up reveal-stagger-3">
-            <span>I am an</span>
-            <span id="heroRole" class="hero-role-text">Aspiring Software Developer</span>
-            <span class="hero-role-cursor" aria-hidden="true">|</span>
-          </div>
-
-          <!-- Short Professional Introduction -->
-          <p class="hero-description reveal-fade-up reveal-stagger-3">
-            Master of Computer Applications student at <strong>Poornaprajna Institute of Management (PIM)</strong>. Passionate about software engineering, web technologies, and database architecture, dedicated to translating theoretical computing principles into elegant real-world digital solutions.
-          </p>
-
-          <!-- Primary Hero Action Buttons -->
-          <div class="hero-cta-group reveal-fade-up reveal-stagger-4">
-            <a href="#projects" class="btn-primary">
-              View My Work
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#contact" class="btn-secondary">Contact Me</a>
-            <button type="button" class="btn-ghost btn-open-resume-modal">
-              Download CV &darr;
-            </button>
-          </div>
-
-          <!-- Quick Social Touchpoints -->
-          <div class="hero-social-row reveal-fade-up reveal-stagger-4">
-            <span class="hero-social-label">Connect:</span>
-            <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.24.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
-            </a>
-            <a href="https://www.linkedin.com//invaishnavi-dalavi-417359413?" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-            </a>
-            <a href="mailto:vdalavi005@gmail.com" class="social-icon-btn" aria-label="Email Vaishnavi Directly">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Hero Column: Professional Showcase Card (Hudson Visual Area) -->
-        <div class="hero-visual-card reveal-fade-up reveal-stagger-2">
-          <div class="hero-card-inner">
-            <!-- Profile Avatar Frame -->
-            <div class="hero-avatar-area">
-              <div class="hero-avatar-ring">
-                <div class="hero-avatar-img">
-                  <!-- Stylish Vector Silhouette Representation -->
-                  <svg class="hero-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="46" fill="#181822"/>
-                    <circle cx="50" cy="38" r="18" fill="url(#avatarGrad)"/>
-                    <path d="M22 82C22 66.536 34.536 54 50 54C65.464 54 78 66.536 78 82V86H22V82Z" fill="url(#avatarGrad)"/>
-                    <defs>
-                      <linearGradient id="avatarGrad" x1="22" y1="20" x2="78" y2="86" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FF6B2B"/>
-                        <stop offset="1" stop-color="#FFA043"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <span class="avatar-badge-corner">ACTIVE</span>
-              </div>
-              <h2 class="hero-profile-name">Vaishnavi M Dalavi</h2>
-              <p class="hero-profile-degree">1st Year MCA Candidate</p>
-              <p class="hero-profile-institute">Poornaprajna Institute of Management</p>
+            <div class="hero-actions reveal-fade-up delay-3">
+              <a href="#portfolio" class="btn-hudson-primary">
+                View My Work
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn-hudson-outline">Get In Touch</a>
+              <button type="button" class="btn-hudson-link btn-open-resume-modal">
+                Download Resume &darr;
+              </button>
             </div>
 
-            <!-- Quick Metrics Grid -->
-            <div class="hero-metrics-grid">
-              <div class="metric-box">
-                <div class="metric-label">Degree Period</div>
-                <div class="metric-value">2026 &ndash; 2028</div>
+            <!-- Meta Information Row -->
+            <div class="hero-meta-row reveal-fade-up delay-3">
+              <div class="hero-meta-item">
+                <span class="meta-label">Location Base</span>
+                <span class="meta-value">Udupi, Karnataka</span>
               </div>
-              <div class="metric-box">
-                <div class="metric-label">Location</div>
-                <div class="metric-value">Udupi, KA</div>
+              <div class="hero-meta-item">
+                <span class="meta-label">Academic Program</span>
+                <span class="meta-value">MCA &middot; 2026 &ndash; 2028</span>
               </div>
-            </div>
-
-            <!-- Floating Tech Chips -->
-            <div class="hero-chips-wrap">
-              <span class="hero-tech-chip">Python</span>
-              <span class="hero-tech-chip">Flask</span>
-              <span class="hero-tech-chip">SQLite</span>
-              <span class="hero-tech-chip">Java</span>
-              <span class="hero-tech-chip">HTML5 / CSS3</span>
-              <span class="hero-tech-chip">JavaScript</span>
+              <div class="hero-meta-item">
+                <span class="meta-label">Current Focus</span>
+                <span class="meta-value">Web &amp; Database Architecture</span>
+              </div>
             </div>
           </div>
+
+          <!-- Right Column: Framed Portrait Image Area -->
+          <div class="hero-visual-frame reveal-fade-up delay-2">
+            <div class="portrait-card">
+              <div class="portrait-image-wrap">
+                <img src="assets/profile-portrait.svg" alt="Portrait illustration of Vaishnavi M Dalavi" class="portrait-img" width="800" height="1000" loading="eager">
+              </div>
+              <div class="portrait-caption">
+                <span>Vaishnavi M Dalavi</span>
+                <span>PIM Udupi &middot; MCA</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ========================================================================
-         01 / ABOUT SECTION: Spacious Editorial Composition (Hudson Style)
+         ABOUT SECTION: Hudson Two-Column Editorial Layout
          ======================================================================== -->
-    <section id="about" class="section" aria-labelledby="about-heading">
+    <section id="about" class="section-padding section-bg-alt" aria-labelledby="about-heading">
       <div class="container">
-        <!-- Section Header -->
-        <div class="section-header reveal-fade-up">
-          <span class="section-num">01 / Background &amp; Mindset</span>
-          <h2 id="about-heading" class="section-title">About Me</h2>
-          <p class="section-subtitle">
-            Contextualizing graduate academic immersion at Poornaprajna Institute of Management (PIM), structured problem-solving, and continuous technical growth.
+        
+        <div class="section-head reveal-fade-up">
+          <span class="section-index">01 / Introduction</span>
+          <h2 id="about-heading" class="section-title">About Me &amp; Mindset</h2>
+          <p class="section-desc">
+            Contextualizing graduate academic immersion at Poornaprajna Institute of Management (PIM), software engineering principles, and a continuous learning ethos.
           </p>
         </div>
 
         <div class="about-grid">
-          <!-- Left Column: Editorial Narrative -->
-          <div class="about-narrative reveal-fade-up reveal-stagger-1">
+          
+          <!-- Left Column: Storytelling Narrative -->
+          <div class="about-narrative reveal-fade-up delay-1">
             <blockquote class="about-quote">
               "Building solid foundations in computer applications through practical implementation, clean architecture, and authentic curiosity."
             </blockquote>
 
-            <p class="about-p">
+            <p class="about-body-text">
               I am currently pursuing my first year of Master of Computer Applications at <strong style="color: var(--c-text-primary);">Poornaprajna Institute of Management (PIM)</strong>, located in Udupi, Karnataka. My academic immersion centers around writing maintainable code, developing responsive user interfaces, and implementing backend databases using modern software engineering patterns.
             </p>
 
-            <p class="about-p">
+            <p class="about-body-text">
               Whether building a full-stack database application like the Catering Management System or studying foundational data structures and object-oriented architectures, I am dedicated to translating theoretical computer science principles into practical digital solutions that create real utility.
             </p>
 
-            <!-- Personal Statement Box -->
-            <div class="about-statement-box">
+            <!-- Student Personal Statement -->
+            <div class="statement-box">
               <div class="statement-title">Personal Statement &amp; Ethos</div>
-              <p class="statement-text">
+              <p class="statement-quote">
                 "I am a passionate and motivated computer application student interested in software development, web technologies and programming. I enjoy learning new technologies and creating practical projects. I am eager to improve my technical skills and start my career in the IT industry."
               </p>
             </div>
           </div>
 
-          <!-- Right Column: Student Profile Dossier Card -->
-          <aside class="about-dossier-card reveal-fade-up reveal-stagger-2" aria-label="Student Profile Dossier">
-            <div class="dossier-header">
-              <h3 class="dossier-title">Profile Dossier</h3>
-              <span class="badge-pill basic">PIM Udupi</span>
-            </div>
+          <!-- Right Column: Student Profile Dossier Specification -->
+          <aside class="about-dossier reveal-fade-up delay-2" aria-label="Student Dossier Details">
+            <h3 class="dossier-heading">Profile Dossier</h3>
 
-            <div class="dossier-rows">
-              <div class="dossier-row">
-                <span class="dossier-label">Full Name</span>
-                <span class="dossier-value">Vaishnavi M Dalavi</span>
+            <div class="dossier-list">
+              <div class="dossier-item">
+                <span class="dossier-kicker">Full Name</span>
+                <span class="dossier-data">Vaishnavi M Dalavi</span>
               </div>
-              <div class="dossier-row">
-                <span class="dossier-label">Preferred Name</span>
-                <span class="dossier-value">vaishnavi</span>
+              <div class="dossier-item">
+                <span class="dossier-kicker">Preferred Name</span>
+                <span class="dossier-data">vaishnavi</span>
               </div>
-              <div class="dossier-row">
-                <span class="dossier-label">Academic Program</span>
-                <span class="dossier-value">MCA (2026 &ndash; 2028), Pursuing</span>
+              <div class="dossier-item">
+                <span class="dossier-kicker">Academic Degree</span>
+                <span class="dossier-data">MCA (2026 &ndash; 2028), Pursuing</span>
               </div>
-              <div class="dossier-row">
-                <span class="dossier-label">Institution</span>
-                <span class="dossier-value">Poornaprajna Institute of Management</span>
+              <div class="dossier-item">
+                <span class="dossier-kicker">Institution</span>
+                <span class="dossier-data">Poornaprajna Institute of Management</span>
               </div>
-              <div class="dossier-row">
-                <span class="dossier-label">Location Base</span>
-                <span class="dossier-value">Udupi, Karnataka, India</span>
+              <div class="dossier-item">
+                <span class="dossier-kicker">Location</span>
+                <span class="dossier-data">Udupi, Karnataka, India</span>
               </div>
-              <div class="dossier-row">
-                <span class="dossier-label">Target Roles</span>
-                <span class="dossier-value">Software Developer, Web Developer</span>
+              <div class="dossier-item">
+                <span class="dossier-kicker">Target Roles</span>
+                <span class="dossier-data">Software Developer, Web Developer</span>
               </div>
-              <div class="dossier-row">
-                <span class="dossier-label">Languages</span>
-                <div class="lang-badge-group">
-                  <span class="lang-badge">English</span>
-                  <span class="lang-badge">Kannada</span>
-                  <span class="lang-badge">Hindi</span>
+              <div class="dossier-item">
+                <span class="dossier-kicker">Spoken Languages</span>
+                <div class="lang-tags">
+                  <span class="lang-tag">English</span>
+                  <span class="lang-tag">Kannada</span>
+                  <span class="lang-tag">Hindi</span>
                 </div>
               </div>
             </div>
           </aside>
+
         </div>
       </div>
     </section>
 
     <!-- ========================================================================
-         02 / TECHNICAL SKILLS & VERIFIED PROFICIENCY
+         RESUME / EXPERIENCE & EDUCATION SECTION (Hudson Timeline)
          ======================================================================== -->
-    <section id="skills" class="section" aria-labelledby="skills-heading">
+    <section id="resume" class="section-padding" aria-labelledby="resume-heading">
       <div class="container">
-        <!-- Section Header -->
-        <div class="section-header reveal-fade-up">
-          <span class="section-num">02 / Competencies</span>
-          <h2 id="skills-heading" class="section-title">Technical Skills &amp; Verified Expertise</h2>
-          <p class="section-subtitle">
-            Authentic, verified self-assessments across core programming, web fundamentals, backend tools, and database storage. Documented with integrity without inflation.
+        
+        <div class="section-head reveal-fade-up">
+          <span class="section-index">02 / Credentials</span>
+          <h2 id="resume-heading" class="section-title">Resume &amp; Academic Journey</h2>
+          <p class="section-desc">
+            Formal graduate education at Poornaprajna Institute of Management, specialized academic immersion, and long-term trajectory.
           </p>
         </div>
 
-        <!-- Evaluation Standard Legend -->
-        <div class="skills-legend-bar reveal-fade-up">
-          <div class="legend-left">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2.5" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-            <span>Verified Evaluation Standard:</span>
-          </div>
-          <div class="legend-items">
-            <div class="legend-item">
-              <span class="badge-pill basic">Basic</span>
-              <span>Practical hands-on familiarity; actively applied in project code</span>
+        <div class="resume-section-wrap">
+
+          <!-- Block 1: Academic Education -->
+          <div class="resume-block reveal-fade-up">
+            <div>
+              <h3 class="resume-block-title">Education</h3>
+              <p class="resume-block-subtitle">Graduate Degree</p>
             </div>
-            <div class="legend-item">
-              <span class="badge-pill beginner">Beginner</span>
-              <span>Foundational syntax &amp; active exploratory coursework</span>
+
+            <div class="timeline-items">
+              <article class="timeline-entry">
+                <div class="timeline-entry-header">
+                  <h4 class="entry-title">Master of Computer Applications (MCA)</h4>
+                  <span class="entry-period">2026 &ndash; 2028 &middot; Pursuing</span>
+                </div>
+                <div class="entry-location">Poornaprajna Institute of Management (PIM) &middot; Udupi, Karnataka</div>
+                <p class="entry-desc">
+                  Specialization: <strong>Computer Applications &amp; Software Development</strong>. Academic immersion centered around writing maintainable code, developing responsive user interfaces, and implementing backend databases using modern software engineering patterns.
+                </p>
+                <ul class="entry-bullet-list">
+                  <li class="entry-bullet-item">Rigorous study in Software Engineering methodologies, Database Management Systems, Object-Oriented Programming, and Data Structures.</li>
+                  <li class="entry-bullet-item">Continuous laboratory project execution, translating requirements into working full-stack web applications and relational databases.</li>
+                  <li class="entry-bullet-item">Focused on version control systems (Git/GitHub), clean code conventions, and algorithmic problem decomposition.</li>
+                </ul>
+              </article>
             </div>
           </div>
+
+          <!-- Block 2: Career Trajectory & Goals -->
+          <div class="resume-block reveal-fade-up">
+            <div>
+              <h3 class="resume-block-title">Ambitions</h3>
+              <p class="resume-block-subtitle">Career Trajectory</p>
+            </div>
+
+            <div class="timeline-items">
+              <article class="timeline-entry">
+                <div class="timeline-entry-header">
+                  <h4 class="entry-title">Target Roles &amp; Primary Interests</h4>
+                  <span class="entry-period">IT Industry Focus</span>
+                </div>
+                <p class="entry-desc">
+                  <strong>Target Roles:</strong> Software Developer, Web Developer.<br>
+                  <strong>Primary Interests:</strong> Web Development, Full-Stack Development.
+                </p>
+              </article>
+
+              <article class="timeline-entry">
+                <div class="timeline-entry-header">
+                  <h4 class="entry-title">Short-Term Learning Focus</h4>
+                  <span class="entry-period">Current Roadmap</span>
+                </div>
+                <p class="entry-desc">
+                  "I want to improve my programming skills in Python, Java and C. I also want to learn web development using HTML, CSS, JavaScript and Flask, improve my database management skills using SQL, and gain practical project experience."
+                </p>
+              </article>
+
+              <article class="timeline-entry">
+                <div class="timeline-entry-header">
+                  <h4 class="entry-title">Long-Term Career Vision</h4>
+                  <span class="entry-period">Professional Goal</span>
+                </div>
+                <p class="entry-desc">
+                  "My long-term goal is to become a skilled software developer in a reputed IT company. I want to gain professional experience, improve my technical knowledge, work on real-world projects and build a successful career in the IT industry."
+                </p>
+              </article>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Skills Cards Bento Grid -->
-        <div class="skills-cards-grid">
-
-          <!-- Card 1: Core Programming Languages -->
-          <article class="skill-card reveal-fade-up reveal-stagger-1">
-            <div class="skill-card-head">
-              <h3 class="skill-card-title">Core Programming</h3>
-              <div class="skill-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              </div>
-            </div>
-            <div class="skill-items-list">
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">Python</span>
-                  <span class="badge-pill basic">Basic</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="48%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">Java</span>
-                  <span class="badge-pill basic">Basic</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="45%"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2: Web Fundamentals -->
-          <article class="skill-card reveal-fade-up reveal-stagger-2">
-            <div class="skill-card-head">
-              <h3 class="skill-card-title">Web Fundamentals</h3>
-              <div class="skill-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-              </div>
-            </div>
-            <div class="skill-items-list">
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">HTML5</span>
-                  <span class="badge-pill basic">Basic</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="50%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">CSS3</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="36%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">JavaScript</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="32%"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3: Backend Architecture -->
-          <article class="skill-card reveal-fade-up reveal-stagger-3">
-            <div class="skill-card-head">
-              <h3 class="skill-card-title">Backend Architecture</h3>
-              <div class="skill-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-              </div>
-            </div>
-            <div class="skill-items-list">
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">Flask</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="38%"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4: Databases & Storage -->
-          <article class="skill-card reveal-fade-up reveal-stagger-1">
-            <div class="skill-card-head">
-              <h3 class="skill-card-title">Databases &amp; Storage</h3>
-              <div class="skill-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-              </div>
-            </div>
-            <div class="skill-items-list">
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">SQLite</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="40%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">MySQL</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="35%"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 5: Tools & Workflows -->
-          <article class="skill-card reveal-fade-up reveal-stagger-2">
-            <div class="skill-card-head">
-              <h3 class="skill-card-title">Tools &amp; Workflows</h3>
-              <div class="skill-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-              </div>
-            </div>
-            <div class="skill-items-list">
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">GitHub / Git</span>
-                  <span class="badge-pill basic">Basic</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="45%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">Visual Studio Code</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="42%"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 6: Data Science & CS Core -->
-          <article class="skill-card reveal-fade-up reveal-stagger-3">
-            <div class="skill-card-head">
-              <h3 class="skill-card-title">Data Science &amp; CS Core</h3>
-              <div class="skill-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-              </div>
-            </div>
-            <div class="skill-items-list">
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">NumPy</span>
-                  <span class="badge-pill basic">Basic</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="42%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">Object-Oriented Programming (OOP)</span>
-                  <span class="badge-pill basic">Basic</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="46%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-row">
-                  <span class="skill-name">Data Structures &amp; Algorithms</span>
-                  <span class="badge-pill beginner">Beginner</span>
-                </div>
-                <div class="skill-bar-track" aria-hidden="true">
-                  <div class="skill-bar-fill" data-level-width="32%"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
       </div>
     </section>
 
     <!-- ========================================================================
-         03 / FEATURED PROJECTS (Hudson-Inspired Asymmetric Layout)
+         SKILLS SECTION: Clean Hudson Minimalist Grid
          ======================================================================== -->
-    <section id="projects" class="section" aria-labelledby="projects-heading">
+    <section id="skills" class="section-padding section-bg-alt" aria-labelledby="skills-heading">
       <div class="container">
-        <!-- Section Header -->
-        <div class="section-header reveal-fade-up">
-          <span class="section-num">03 / Portfolio Artifacts</span>
-          <h2 id="projects-heading" class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">
-            An asymmetric, deep-dive examination of real-world software artifacts, business problems solved, and architectural implementations.
+
+        <div class="section-head reveal-fade-up">
+          <span class="section-index">03 / Competencies</span>
+          <h2 id="skills-heading" class="section-title">Technical Skills &amp; Verified Expertise</h2>
+          <p class="section-desc">
+            Authentic, verified self-assessments across core programming, web fundamentals, backend tools, and database storage. Faithfully documented without inflation.
+          </p>
+        </div>
+
+        <div class="skills-grid-clean">
+
+          <!-- Group 1: Core Programming -->
+          <div class="skill-group-card reveal-fade-up delay-1">
+            <div class="skill-group-head">
+              <h3 class="skill-group-title">Core Programming</h3>
+              <span class="skill-group-num">[ 01 ]</span>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-line-item">
+                <span class="skill-tech-name">Python</span>
+                <span class="skill-level-pill basic">Basic</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">Java</span>
+                <span class="skill-level-pill basic">Basic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2: Web Fundamentals -->
+          <div class="skill-group-card reveal-fade-up delay-2">
+            <div class="skill-group-head">
+              <h3 class="skill-group-title">Web Fundamentals</h3>
+              <span class="skill-group-num">[ 02 ]</span>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-line-item">
+                <span class="skill-tech-name">HTML5</span>
+                <span class="skill-level-pill basic">Basic</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">CSS3</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">JavaScript</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3: Backend & Databases -->
+          <div class="skill-group-card reveal-fade-up delay-3">
+            <div class="skill-group-head">
+              <h3 class="skill-group-title">Backend &amp; Storage</h3>
+              <span class="skill-group-num">[ 03 ]</span>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-line-item">
+                <span class="skill-tech-name">Flask</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">SQLite</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">MySQL</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4: Tools & CS Fundamentals -->
+          <div class="skill-group-card reveal-fade-up delay-1">
+            <div class="skill-group-head">
+              <h3 class="skill-group-title">Tools &amp; Workflows</h3>
+              <span class="skill-group-num">[ 04 ]</span>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-line-item">
+                <span class="skill-tech-name">GitHub / Git</span>
+                <span class="skill-level-pill basic">Basic</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">Visual Studio Code</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5: Data & CS Concepts -->
+          <div class="skill-group-card reveal-fade-up delay-2">
+            <div class="skill-group-head">
+              <h3 class="skill-group-title">Data Science &amp; CS Core</h3>
+              <span class="skill-group-num">[ 05 ]</span>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-line-item">
+                <span class="skill-tech-name">NumPy</span>
+                <span class="skill-level-pill basic">Basic</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">OOP (Object-Oriented)</span>
+                <span class="skill-level-pill basic">Basic</span>
+              </div>
+              <div class="skill-line-item">
+                <span class="skill-tech-name">Data Structures &amp; Algorithms</span>
+                <span class="skill-level-pill beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PORTFOLIO / PROJECTS GALLERY (Hudson Style)
+         ======================================================================== -->
+    <section id="portfolio" class="section-padding" aria-labelledby="portfolio-heading">
+      <div class="container">
+
+        <div class="section-head reveal-fade-up">
+          <span class="section-index">04 / Work</span>
+          <h2 id="portfolio-heading" class="section-title">Selected Portfolio Projects</h2>
+          <p class="section-desc">
+            A curated showcase of real-world software artifacts, business problems solved, and architectural implementations.
           </p>
         </div>
 
         <!-- Project Filtering Tabs -->
-        <div class="project-filters reveal-fade-up" role="tablist" aria-label="Project Categories">
+        <div class="portfolio-filters reveal-fade-up" role="tablist" aria-label="Project Categories">
           <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
             All Work
           </button>
@@ -634,471 +504,233 @@
           </button>
         </div>
 
-        <div class="projects-container">
+        <div class="portfolio-gallery">
 
-          <!-- PROJECT 01: Catering Management System (Asymmetric Card) -->
-          <article class="project-card-asymmetric project-item reveal-fade-up" data-category="completed web">
-            
-            <!-- Left Editorial Details Pane -->
-            <div class="project-details-pane">
-              <div>
-                <div class="project-header-row">
-                  <span class="project-index">[ 01 ] &mdash; WEB DEVELOPMENT</span>
-                  <span class="badge-pill success">Status: Completed</span>
-                </div>
+          <!-- PROJECT 01: Catering Management System -->
+          <article class="portfolio-item project-card-item reveal-fade-up" data-category="completed web">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/project-catering.svg" alt="Catering Management System interface preview" class="portfolio-thumb-img" width="900" height="650" loading="lazy">
+            </div>
 
-                <h3 class="project-title">Catering Management System</h3>
-
-                <p class="project-desc">
-                  A full-featured web application engineered to coordinate and digitize catering business workflows. It provides clients with interactive digital menus, dynamic cart management, and automated order receipts, while equipping business administrators with live earnings dashboards and structured order archives.
-                </p>
-
-                <!-- Problem Solved Callout -->
-                <div class="project-problem-box">
-                  <div class="problem-box-title">Problem Being Solved:</div>
-                  <p class="problem-box-desc">
-                    Traditional catering services face errors in manual order calculations, misplaced paper booking logs, and tedious revenue tallying. This application automates customer ordering, bill computation with GST and promotional discounts, saving operational hours and ensuring order clarity.
-                  </p>
-                </div>
-
-                <!-- Key Engineering Contributions Grid -->
-                <div class="contributions-list">
-                  <div class="contribution-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span><strong>Full-Stack Architecture:</strong> Engineered multi-page responsive web views.</span>
-                  </div>
-                  <div class="contribution-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span><strong>Dynamic Menu &amp; Cart:</strong> Built live food selection &amp; cart checkout flow.</span>
-                  </div>
-                  <div class="contribution-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span><strong>Relational SQLite DB:</strong> Schema modeling for Menu, Order, and Customer records.</span>
-                  </div>
-                  <div class="contribution-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span><strong>Automated Billing &amp; GST:</strong> Algorithmic tax logic, item calculations &amp; discounts.</span>
-                  </div>
-                </div>
-
-                <!-- Tech Tags -->
-                <div class="tech-pills-row">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Flask</span>
-                  <span class="tech-tag">SQLite</span>
-                  <span class="tech-tag">HTML5</span>
-                  <span class="tech-tag">CSS3</span>
-                  <span class="tech-tag">JavaScript</span>
-                </div>
+            <div class="portfolio-info">
+              <div class="portfolio-category-row">
+                <span class="portfolio-cat">Web Development</span>
+                <span class="portfolio-status">Completed</span>
               </div>
 
-              <!-- Action Buttons -->
-              <div class="project-actions">
-                <button type="button" class="btn-primary btn-open-project-modal">
-                  Detailed Project Specs
+              <h3 class="portfolio-title">Catering Management System</h3>
+
+              <p class="portfolio-desc">
+                The Catering Management System is a full-featured web application engineered to digitize catering workflows. It provides customers with interactive digital menus, live shopping carts, real-time bill calculations, and automated order confirmations, while providing business owners an admin dashboard to track daily/monthly revenues.
+              </p>
+
+              <div class="portfolio-tech-list">
+                <span class="portfolio-tech-tag">Python</span>
+                <span class="portfolio-tech-tag">Flask</span>
+                <span class="portfolio-tech-tag">SQLite</span>
+                <span class="portfolio-tech-tag">HTML5</span>
+                <span class="portfolio-tech-tag">CSS3</span>
+                <span class="portfolio-tech-tag">JavaScript</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="btn-hudson-primary btn-open-project-modal" style="padding: 11px 24px; font-size: 0.875rem;">
+                  Project Specs
                 </button>
-                <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="btn-hudson-outline" style="padding: 10px 22px; font-size: 0.875rem;">
                   Source Code &nearr;
                 </a>
               </div>
             </div>
+          </article>
 
-            <!-- Right Column: Visual Mockup Frame (Hudson Style Window) -->
-            <div class="project-mockup-pane" aria-label="Catering System UI Mockup">
-              <div class="mockup-window-frame">
-                <div class="mockup-top-bar">
-                  <div class="window-dot red"></div>
-                  <div class="window-dot yellow"></div>
-                  <div class="window-dot green"></div>
-                  <span class="window-address">catering-management.local / admin</span>
-                </div>
-                <div class="mockup-screen-body">
-                  <div class="mockup-header-inner">
-                    <div>
-                      <span style="font-family: var(--font-mono); font-size: 0.625rem; color: var(--c-accent); text-transform: uppercase;">ADMIN DASHBOARD</span>
-                      <div class="mockup-title">Operations Overview</div>
-                    </div>
-                    <span class="mockup-badge">SQLite Connected</span>
-                  </div>
+          <!-- PROJECT 02: Full-Stack Application & Algorithm Visualizer -->
+          <article class="portfolio-item project-card-item reveal-fade-up delay-1" data-category="roadmap">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/project-algo.svg" alt="Algorithm visualizer project preview" class="portfolio-thumb-img" width="900" height="650" loading="lazy">
+            </div>
 
-                  <!-- Mockup Widgets Grid -->
-                  <div class="mockup-stats-row">
-                    <div class="mockup-stat-tile">
-                      <div class="mockup-stat-label">Active Orders</div>
-                      <div class="mockup-stat-val">18</div>
-                    </div>
-                    <div class="mockup-stat-tile">
-                      <div class="mockup-stat-label">Monthly Rev.</div>
-                      <div class="mockup-stat-val">&#8377; 84,500</div>
-                    </div>
-                  </div>
+            <div class="portfolio-info">
+              <div class="portfolio-category-row">
+                <span class="portfolio-cat">Academic Roadmap</span>
+                <span class="portfolio-status" style="background: #FDF4E6; color: #8C5B1C;">In Progress</span>
+              </div>
 
-                  <!-- Mockup Bill Preview Box -->
-                  <div class="mockup-receipt-box">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-weight: 700; color: #FFFFFF;">
-                      <span>Order #CMS-2026-04</span>
-                      <span style="color: var(--c-accent);">Auto Billing</span>
-                    </div>
-                    <div class="receipt-line">
-                      <span>South Indian Feast (120 Pax)</span>
-                      <span>&#8377; 24,000</span>
-                    </div>
-                    <div class="receipt-line">
-                      <span>GST (5%)</span>
-                      <span>+ &#8377; 1,200</span>
-                    </div>
-                    <div class="receipt-total">
-                      <span>Total Payable</span>
-                      <span>&#8377; 25,200</span>
-                    </div>
-                  </div>
-                </div>
+              <h3 class="portfolio-title">Full-Stack Application &amp; Algorithm Visualizer</h3>
+
+              <p class="portfolio-desc">
+                Architecting advanced academic projects leveraging Python, Java, structured MySQL queries, and Flask REST endpoints to deepen practical full-stack and algorithmic problem decomposition proficiency.
+              </p>
+
+              <div class="portfolio-tech-list">
+                <span class="portfolio-tech-tag">Python</span>
+                <span class="portfolio-tech-tag">Java</span>
+                <span class="portfolio-tech-tag">MySQL</span>
+                <span class="portfolio-tech-tag">Flask</span>
+                <span class="portfolio-tech-tag">DSA</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--c-text-muted);">
+                  PIM MCA Curriculum &middot; Upcoming Case Study
+                </span>
               </div>
             </div>
-
           </article>
 
-          <!-- Transparent Roadmap Secondary Project Card -->
-          <article class="roadmap-card project-item reveal-fade-up" data-category="roadmap">
-            <div class="roadmap-header">
-              <span class="badge-pill beginner">Next In Queue &middot; Academic Roadmap</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-text-muted);">PIM MCA Curriculum</span>
-            </div>
-            <h3 class="roadmap-title">Full-Stack Application &amp; Algorithm Visualizer</h3>
-            <p class="roadmap-desc">
-              As part of short-term academic goals, architecting advanced projects leveraging Python, Java, structured MySQL queries, and Flask REST endpoints to deepen practical full-stack and algorithmic proficiency.
-            </p>
-            <div class="tech-pills-row" style="margin-bottom: 0;">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Flask</span>
-              <span class="tech-tag">DSA</span>
-            </div>
-          </article>
+        </div>
 
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHILOSOPHY SECTION (Hudson Editorial Quote Showcase)
+         ======================================================================== -->
+    <section class="philosophy-section" aria-label="Guiding Engineering Philosophy">
+      <div class="container philosophy-container reveal-fade-up">
+        <div class="philosophy-quote-mark">&ldquo;</div>
+        <p class="philosophy-text">
+          Code is not merely instructions for machines—it is the translation of human thought into reliable tools. In software engineering, discipline, curiosity, and continuous refinement are everything.
+        </p>
+        <div class="philosophy-cite">
+          Vaishnavi M Dalavi &middot; Poornaprajna Institute of Management (PIM)
         </div>
       </div>
     </section>
 
     <!-- ========================================================================
-         04 / EDUCATION TIMELINE SECTION
+         CONTACT SECTION (Hudson Spacious Contact)
          ======================================================================== -->
-    <section id="education" class="section" aria-labelledby="edu-heading">
+    <section id="contact" class="section-padding" aria-labelledby="contact-heading">
       <div class="container">
-        <!-- Section Header -->
-        <div class="section-header reveal-fade-up">
-          <span class="section-num">04 / Academic Journey</span>
-          <h2 id="edu-heading" class="section-title">Education Timeline</h2>
-          <p class="section-subtitle">
-            Formal graduate education at Poornaprajna Institute of Management, specialized in software engineering and application architecture.
+
+        <div class="section-head reveal-fade-up">
+          <span class="section-index">05 / Contact</span>
+          <h2 id="contact-heading" class="section-title">Let's Connect</h2>
+          <p class="section-desc">
+            Whether for internship inquiries, project discussions, or academic collaborations, feel free to reach out directly.
           </p>
         </div>
 
-        <div class="timeline-wrap">
-          <article class="timeline-card reveal-fade-up">
-            <div class="timeline-node" aria-hidden="true"></div>
+        <div class="contact-grid">
 
-            <div class="timeline-meta-row">
-              <span class="badge-pill basic">Current Status: Pursuing</span>
-              <span class="timeline-dates">2026 &ndash; 2028</span>
-            </div>
+          <!-- Left Column: Direct Touchpoints -->
+          <div class="contact-channels reveal-fade-up delay-1">
 
-            <h3 class="timeline-degree">Master of Computer Applications (MCA)</h3>
-            <p class="timeline-institution">
-              Poornaprajna Institute of Management (PIM) &middot; Udupi, Karnataka
-            </p>
-
-            <div class="timeline-specialization">
-              Specialization: Computer Applications &amp; Software Development
-            </div>
-
-            <ul class="timeline-points">
-              <li class="timeline-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Rigorous Foundations:</strong> Intensive study in Software Engineering methodologies, Database Management Systems, Object-Oriented Programming, and Data Structures.</span>
-              </li>
-              <li class="timeline-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Hands-On Engineering:</strong> Continuous laboratory project execution, translating requirements into working full-stack web applications and relational databases.</span>
-              </li>
-              <li class="timeline-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Industry Readiness:</strong> Focused on version control systems (Git/GitHub), clean code conventions, and algorithmic problem decomposition.</span>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         05 / CAREER TRAJECTORY & LEARNING GOALS
-         ======================================================================== -->
-    <section id="trajectory" class="section" aria-labelledby="trajectory-heading">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header reveal-fade-up">
-          <span class="section-num">05 / Vision &amp; Goals</span>
-          <h2 id="trajectory-heading" class="section-title">Career Trajectory</h2>
-          <p class="section-subtitle">
-            Defined career milestones, short-term engineering goals, and long-term vision in the IT industry.
-          </p>
-        </div>
-
-        <div class="trajectory-grid">
-
-          <!-- Card 1: Target Roles & Areas of Interest -->
-          <article class="trajectory-card reveal-fade-up reveal-stagger-1">
-            <div>
-              <div class="trajectory-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-              </div>
-              <h3 class="trajectory-card-title">Target Roles &amp; Interests</h3>
-              <p class="trajectory-card-desc">
-                Targeting positions where I can write clean code, learn from senior engineers, and build practical web and software solutions.
-              </p>
-            </div>
-            <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-text-muted); text-transform: uppercase; display: block; margin-bottom: 8px;">
-                Target Roles:
-              </span>
-              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                <span class="badge-pill basic">Software Developer</span>
-                <span class="badge-pill basic">Web Developer</span>
-              </div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-text-muted); text-transform: uppercase; display: block; margin-bottom: 8px;">
-                Primary Domains:
-              </span>
-              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                <span class="lang-badge">Web Development</span>
-                <span class="lang-badge">Full-Stack Development</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2: Short-Term Learning Focus -->
-          <article class="trajectory-card reveal-fade-up reveal-stagger-2">
-            <div>
-              <div class="trajectory-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-              </div>
-              <h3 class="trajectory-card-title">Short-Term Learning Focus</h3>
-              <p class="trajectory-card-desc">
-                "I want to improve my programming skills in Python, Java and C. I also want to learn web development using HTML, CSS, JavaScript and Flask, improve my database management skills using SQL, and gain practical project experience."
-              </p>
-            </div>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem; color: var(--c-text-secondary); border-top: 1px solid var(--c-border); padding-top: 16px;">
-              <li style="display: flex; gap: 8px; align-items: center;">
-                <span style="color: var(--c-accent); font-weight: bold;">&bull;</span>
-                <span>Deepen programming fundamentals in Python &amp; Java</span>
-              </li>
-              <li style="display: flex; gap: 8px; align-items: center;">
-                <span style="color: var(--c-accent); font-weight: bold;">&bull;</span>
-                <span>Advance Flask and SQL relational architecture</span>
-              </li>
-              <li style="display: flex; gap: 8px; align-items: center;">
-                <span style="color: var(--c-accent); font-weight: bold;">&bull;</span>
-                <span>Build practical, deployment-ready software</span>
-              </li>
-            </ul>
-          </article>
-
-          <!-- Card 3: Long-Term Career Vision -->
-          <article class="trajectory-card reveal-fade-up reveal-stagger-3">
-            <div>
-              <div class="trajectory-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </div>
-              <h3 class="trajectory-card-title">Long-Term Career Vision</h3>
-              <p class="trajectory-card-desc">
-                "My long-term goal is to become a skilled software developer in a reputed IT company. I want to gain professional experience, improve my technical knowledge, work on real-world projects and build a successful career in the IT industry."
-              </p>
-            </div>
-            <div style="background-color: var(--c-surface-elevated); border-radius: var(--radius-sm); padding: 18px; border: 1px solid var(--c-border);">
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--c-accent); display: block; margin-bottom: 4px;">
-                Guiding Principles:
-              </span>
-              <p style="font-size: 0.8125rem; color: var(--c-text-muted); line-height: 1.6;">
-                Uncompromising work ethic, respectful collaboration, disciplined code standards, and perpetual learning.
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         06 / CONTACT SECTION: Channels & Direct Email Form
-         ======================================================================== -->
-    <section id="contact" class="section" aria-labelledby="contact-heading">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header reveal-fade-up">
-          <span class="section-num">06 / Connect</span>
-          <h2 id="contact-heading" class="section-title">Get In Touch</h2>
-          <p class="section-subtitle">
-            Whether for internship inquiries, project discussions, or academic collaborations, reach out directly.
-          </p>
-        </div>
-
-        <div class="contact-layout">
-
-          <!-- Left Column: Touchpoint Channels -->
-          <div class="contact-channels reveal-fade-up reveal-stagger-1">
-
-            <!-- Location -->
-            <div class="contact-channel-card">
-              <div class="channel-left">
-                <div class="channel-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-label">Location Base</span>
-                  <div class="channel-value">Udupi, Karnataka, India</div>
-                </div>
-              </div>
-              <span class="badge-pill basic">PIM Udupi</span>
-            </div>
-
-            <!-- Email with 1-Click Copy -->
-            <div class="contact-channel-card">
-              <div class="channel-left">
-                <div class="channel-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-label">Direct Email</span>
-                  <a href="mailto:vdalavi005@gmail.com" class="channel-value">vdalavi005@gmail.com</a>
-                </div>
-              </div>
-              <button type="button" class="copy-btn" data-copy-text="vdalavi005@gmail.com" data-label="Email" aria-label="Copy email address to clipboard">
-                <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-
-            <!-- Phone with 1-Click Copy -->
-            <div class="contact-channel-card">
-              <div class="channel-left">
-                <div class="channel-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-label">Phone Contact</span>
-                  <a href="tel:7899420886" class="channel-value">+91 7899420886</a>
-                </div>
-              </div>
-              <button type="button" class="copy-btn" data-copy-text="7899420886" data-label="Phone number" aria-label="Copy phone number to clipboard">
-                <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-
-            <!-- LinkedIn Profile -->
-            <div class="contact-channel-card">
-              <div class="channel-left">
-                <div class="channel-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-label">LinkedIn Profile</span>
-                  <a href="https://www.linkedin.com//invaishnavi-dalavi-417359413?" target="_blank" rel="noopener noreferrer" class="channel-value">
-                    vaishnavi-dalavi &nearr;
-                  </a>
-                </div>
+            <div class="contact-item">
+              <span class="contact-label">Direct Email</span>
+              <div class="contact-val">
+                <a href="mailto:vdalavi005@gmail.com">vdalavi005@gmail.com</a>
+                <button type="button" class="copy-icon-btn copy-btn" data-copy-text="vdalavi005@gmail.com" data-label="Email" aria-label="Copy email address to clipboard">
+                  <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
               </div>
             </div>
 
-            <!-- GitHub Profile -->
-            <div class="contact-channel-card">
-              <div class="channel-left">
-                <div class="channel-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.24.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-label">GitHub Repositories</span>
-                  <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="channel-value">
-                    github.com/vaishnavidalavi &nearr;
-                  </a>
-                </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone Contact</span>
+              <div class="contact-val">
+                <a href="tel:7899420886">+91 7899420886</a>
+                <button type="button" class="copy-icon-btn copy-btn" data-copy-text="7899420886" data-label="Phone number" aria-label="Copy phone number to clipboard">
+                  <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Location Base</span>
+              <div class="contact-val">
+                <span>Udupi, Karnataka, India</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Professional Networks</span>
+              <div style="display: flex; gap: 20px; margin-top: 6px;">
+                <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="btn-hudson-link">
+                  GitHub &nearr;
+                </a>
+                <a href="https://www.linkedin.com//invaishnavi-dalavi-417359413?" target="_blank" rel="noopener noreferrer" class="btn-hudson-link">
+                  LinkedIn &nearr;
+                </a>
               </div>
             </div>
 
           </div>
 
-          <!-- Right Column: Interactive Message Form -->
-          <div class="contact-form-panel reveal-fade-up reveal-stagger-2">
-            <h3 class="form-panel-title">Send a Direct Note</h3>
-            <p class="form-panel-sub">
+          <!-- Right Column: Minimalist Contact Form -->
+          <div class="contact-form-clean reveal-fade-up delay-2">
+            <h3 class="contact-form-title">Send a Direct Note</h3>
+            <p class="contact-form-sub">
               Compose a message below to generate a pre-formatted email directly to Vaishnavi.
             </p>
 
-            <form id="contactForm" class="form-grid" novalidate>
-              <div class="form-field">
-                <label for="contactName" class="field-label">Your Name *</label>
-                <input type="text" id="contactName" name="name" class="field-input" placeholder="e.g. Priya Sharma" required>
+            <form id="contactForm" class="form-group-list" novalidate>
+              <div class="form-input-field">
+                <label for="contactName" class="input-label">Your Name *</label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Priya Sharma" required>
               </div>
 
-              <div class="form-field">
-                <label for="contactEmail" class="field-label">Your Email *</label>
-                <input type="email" id="contactEmail" name="email" class="field-input" placeholder="priya@example.com" required>
+              <div class="form-input-field">
+                <label for="contactEmail" class="input-label">Your Email *</label>
+                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="priya@example.com" required>
               </div>
 
-              <div class="form-field">
-                <label for="contactSubject" class="field-label">Subject</label>
-                <input type="text" id="contactSubject" name="subject" class="field-input" placeholder="Software Engineering Internship / Inquiry">
+              <div class="form-input-field">
+                <label for="contactSubject" class="input-label">Subject</label>
+                <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="Software Engineering Internship / Inquiry">
               </div>
 
-              <div class="form-field">
-                <label for="contactMessage" class="field-label">Message *</label>
-                <textarea id="contactMessage" name="message" class="field-textarea" placeholder="Hello Vaishnavi, I came across your portfolio and would like to connect regarding..." required></textarea>
+              <div class="form-input-field">
+                <label for="contactMessage" class="input-label">Message *</label>
+                <textarea id="contactMessage" name="message" class="form-control" placeholder="Hello Vaishnavi, I came across your portfolio and would like to discuss..." required></textarea>
               </div>
 
-              <div id="formStatus" class="form-status-msg" role="status" aria-live="polite"></div>
+              <div id="formAlert" class="form-alert" role="status" aria-live="polite"></div>
 
-              <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+              <button type="submit" class="btn-hudson-primary" style="justify-content: center; width: 100%;">
                 Send Message via Email
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
               </button>
             </form>
           </div>
 
         </div>
+
       </div>
     </section>
 
   </main>
 
   <!-- ==========================================================================
-       SITE FOOTER (Minimalist Editorial)
+       SITE FOOTER (Hudson Minimalist Footer)
        ========================================================================== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <div class="footer-top">
-        <div>
-          <a href="#hero" class="brand-logo" aria-label="Vaishnavi - Return to Top">
-            vaishnavi<span class="brand-dot">.</span>
-          </a>
-          <p class="footer-tagline">1st Year MCA Student &middot; Aspiring Software Developer</p>
+      <div class="footer-row">
+        <a href="#hero" class="footer-brand" aria-label="Vaishnavi - Home">
+          vaishnavi<span>.</span>
+        </a>
+
+        <div class="footer-social-links">
+          <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="footer-social-link">GitHub</a>
+          <a href="https://www.linkedin.com//invaishnavi-dalavi-417359413?" target="_blank" rel="noopener noreferrer" class="footer-social-link">LinkedIn</a>
+          <a href="mailto:vdalavi005@gmail.com" class="footer-social-link">Email</a>
         </div>
 
-        <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Scroll back to top of page">
+        <button type="button" id="backToTopBtn" class="back-to-top-link" aria-label="Scroll back to top of page">
           Back to Top &uarr;
         </button>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-bottom-copy">
         <span>&copy; <span id="currentYear">2026</span> Vaishnavi M Dalavi. All rights reserved.</span>
-        <span class="footer-institute-highlight">Poornaprajna Institute of Management (PIM), Udupi</span>
+        <span>Poornaprajna Institute of Management (PIM), Udupi</span>
       </div>
     </div>
   </footer>
 
   <!-- ==========================================================================
-       MODALS: Project Details & Printable Resume
+       MODALS: Project Architecture Specs & Printable Resume
        ========================================================================== -->
   <!-- Project Modal -->
   <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
@@ -1111,37 +743,37 @@
       </div>
       <div class="modal-body">
         <div style="display: flex; gap: 8px;">
-          <span class="badge-pill basic">Completed Project</span>
-          <span class="lang-badge">Web Development</span>
+          <span class="skill-level-pill basic">Completed Project</span>
+          <span class="lang-tag">Web Development</span>
         </div>
 
         <div>
-          <h4 style="font-size: 1.0625rem; font-weight: 700; color: var(--c-text-primary); margin-bottom: 8px;">Executive Overview</h4>
+          <h4 style="font-family: var(--font-serif); font-size: 1.1875rem; color: var(--c-text-primary); margin-bottom: 6px;">Executive Overview</h4>
           <p style="font-size: 0.9375rem; color: var(--c-text-secondary); line-height: 1.7;">
             The Catering Management System was engineered to manage and streamline catering business operations. It digitizes the customer ordering experience, food details, billing calculations, and provides business owners with real-time analytics.
           </p>
         </div>
 
-        <div style="background-color: var(--c-surface-elevated); padding: 20px; border-radius: var(--radius-sm); border-left: 3px solid var(--c-accent);">
-          <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--c-text-primary); margin-bottom: 6px;">Problem Statement &amp; Resolution</h4>
+        <div style="background-color: var(--c-bg-alt); padding: 20px; border-left: 2px solid var(--c-accent);">
+          <h4 style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--c-accent); margin-bottom: 6px;">Problem Statement &amp; Resolution</h4>
           <p style="font-size: 0.875rem; color: var(--c-text-secondary); line-height: 1.65;">
             By replacing error-prone manual calculations and disorganized paper order logs with a digital interface, the project helps catering businesses avoid calculation errors, save time, and maintain reliable order histories.
           </p>
         </div>
 
         <div>
-          <h4 style="font-size: 1.0625rem; font-weight: 700; color: var(--c-text-primary); margin-bottom: 12px;">Key Engineering Contributions</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem; color: var(--c-text-secondary);">
-            <li style="display: flex; gap: 8px;"><span style="color: var(--c-accent); font-weight: bold;">&bull;</span><span><strong>Full UI &amp; Web Development:</strong> Designed user interface, food menu layout, and shopping cart pages.</span></li>
-            <li style="display: flex; gap: 8px;"><span style="color: var(--c-accent); font-weight: bold;">&bull;</span><span><strong>Customer Order Management:</strong> Handled client order placement, status tracking, and confirmation.</span></li>
-            <li style="display: flex; gap: 8px;"><span style="color: var(--c-accent); font-weight: bold;">&bull;</span><span><strong>SQLite Integration:</strong> Relational schema connecting food items, transactions, and order logs.</span></li>
-            <li style="display: flex; gap: 8px;"><span style="color: var(--c-accent); font-weight: bold;">&bull;</span><span><strong>Admin Analytics Dashboard:</strong> Real-time overview of daily/monthly earnings and order archives.</span></li>
-            <li style="display: flex; gap: 8px;"><span style="color: var(--c-accent); font-weight: bold;">&bull;</span><span><strong>Automated Billing Engine:</strong> Accurate bill generation incorporating GST percentages and discounts.</span></li>
+          <h4 style="font-family: var(--font-serif); font-size: 1.1875rem; color: var(--c-text-primary); margin-bottom: 10px;">Key Engineering Contributions</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--c-text-secondary);">
+            <li><strong>Full UI &amp; Web Development:</strong> Designed user interface, food menu layout, and shopping cart pages.</li>
+            <li><strong>Customer Order Management:</strong> Handled client order placement, status tracking, and confirmation.</li>
+            <li><strong>SQLite Integration:</strong> Relational schema connecting food items, transactions, and order logs.</li>
+            <li><strong>Admin Analytics Dashboard:</strong> Real-time overview of daily/monthly earnings and order archives.</li>
+            <li><strong>Automated Billing Engine:</strong> Accurate bill generation incorporating GST percentages and discounts.</li>
           </ul>
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        <a href="https://github.com/vaishnavidalavi" target="_blank" rel="noopener noreferrer" class="btn-hudson-outline" style="padding: 10px 22px; font-size: 0.875rem;">
           View Repository on GitHub &nearr;
         </a>
       </div>
@@ -1205,7 +837,7 @@
             <div>
               <div class="resume-item-row">
                 <span>Catering Management System &middot; Web Development</span>
-                <span style="color: #065F46; font-size: 0.8125rem;">Completed</span>
+                <span style="color: #2E7548; font-size: 0.8125rem;">Completed</span>
               </div>
               <div class="resume-sub">Tech: Python, Flask, SQLite, HTML5, CSS3, JavaScript</div>
               <p class="resume-text">
@@ -1223,7 +855,7 @@
         </article>
       </div>
       <div class="modal-footer">
-        <button type="button" id="printResumeBtn" class="btn-primary" style="padding: 10px 22px;">
+        <button type="button" id="printResumeBtn" class="btn-hudson-primary" style="padding: 10px 22px; font-size: 0.875rem;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
@@ -1241,11 +873,11 @@
       <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span id="toastMessage">Action completed successfully</span>
+      <span id="toastMessage">Copied to clipboard</span>
     </div>
   </div>
 
-  <!-- Main JavaScript -->
+  <!-- Main Interactive JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
