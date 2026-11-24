@@ -1,0 +1,7 @@
+# Prompt & temporary files
+ppf
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
