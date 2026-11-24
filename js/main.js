@@ -1,7 +1,8 @@
 /**
- * VAISHNAVI M DALAVI - PERSONAL DEVELOPER PORTFOLIO
- * Main Interactive Script
- * High performance, zero external libraries
+ * VAISHNAVI M DALAVI — PREMIUM DEVELOPER PORTFOLIO
+ * Main Interactive Engine
+ * Hudson-Inspired Visuals, Micro-Interactions, and Dark Theme Aesthetics
+ * Zero heavy external dependencies, 60fps performance
  */
 
 (function () {
@@ -11,6 +12,14 @@
   // DOM Elements
   // ----------------------------------------------------------------------------
   const htmlElement = document.documentElement;
+  const siteHeader = document.getElementById('siteHeader');
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  const cursorDot = document.getElementById('cursorDot');
+  const cursorCircle = document.getElementById('cursorCircle');
+  const preloader = document.getElementById('preloader');
+  const preloaderBar = document.getElementById('preloaderBar');
+  const preloaderCounter = document.getElementById('preloaderCounter');
+  const heroRoleEl = document.getElementById('heroRole');
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const drawerCloseBtn = document.getElementById('drawerCloseBtn');
@@ -18,8 +27,8 @@
   const drawerBackdrop = document.getElementById('drawerBackdrop');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
-  const filterTabs = document.querySelectorAll('.project-filter-btn');
-  const projectCards = document.querySelectorAll('.project-card-item');
+  const filterTabs = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
   const copyButtons = document.querySelectorAll('.copy-btn');
   const toast = document.getElementById('toastNotification');
   const toastMessage = document.getElementById('toastMessage');
@@ -39,15 +48,321 @@
   let toastTimeout = null;
 
   // ----------------------------------------------------------------------------
-  // 1. Theme Management (Light by Default per Requirement)
+  // 1. Preloader Animation
+  // ----------------------------------------------------------------------------
+  function initPreloader() {
+    if (!preloader || !preloaderBar || !preloaderCounter) return;
+
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += Math.floor(Math.random() * 15) + 8;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(interval);
+
+        preloaderBar.style.width = '100%';
+        preloaderCounter.textContent = '100%';
+
+        setTimeout(() => {
+          preloader.classList.add('fade-out');
+          document.body.style.overflow = '';
+          triggerInitialReveals();
+        }, 400);
+      } else {
+        preloaderBar.style.width = `${progress}%`;
+        preloaderCounter.textContent = `${progress < 10 ? '0' + progress : progress}%`;
+      }
+    }, 45);
+  }
+
+  // ----------------------------------------------------------------------------
+  // 2. Custom Cursor (Interactive Desktop Experience)
+  // ----------------------------------------------------------------------------
+  function initCustomCursor() {
+    if (!cursorDot || !cursorCircle) return;
+    // Check if touch device
+    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+      return;
+    }
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let circleX = mouseX;
+    let circleY = mouseY;
+    let isVisible = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isVisible) {
+        cursorDot.style.opacity = '1';
+        cursorCircle.style.opacity = '1';
+        isVisible = true;
+      }
+
+      cursorDot.style.left = `${mouseX}px`;
+      cursorDot.style.top = `${mouseY}px`;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      cursorDot.style.opacity = '0';
+      cursorCircle.style.opacity = '0';
+      isVisible = false;
+    });
+
+    // Smooth lerp trailing animation for outer circle
+    function animateCursorCircle() {
+      circleX += (mouseX - circleX) * 0.18;
+      circleY += (mouseY - circleY) * 0.18;
+
+      cursorCircle.style.left = `${circleX}px`;
+      cursorCircle.style.top = `${circleY}px`;
+
+      requestAnimationFrame(animateCursorCircle);
+    }
+    requestAnimationFrame(animateCursorCircle);
+
+    // Interactive element hover scale
+    const interactiveElements = document.querySelectorAll(
+      'a, button, input, textarea, .filter-btn, .skill-card, .project-card-asymmetric, .copy-btn, .social-icon-btn, .theme-toggle-btn'
+    );
+
+    interactiveElements.forEach((el) => {
+      el.addEventListener('mouseenter', () => {
+        cursorCircle.classList.add('cursor-hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursorCircle.classList.remove('cursor-hover');
+      });
+    });
+  }
+
+  // ----------------------------------------------------------------------------
+  // 3. Scroll Progress Indicator & Sticky Header Elevation
+  // ----------------------------------------------------------------------------
+  function initScrollProgress() {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+      if (scrollProgressBar) {
+        scrollProgressBar.style.width = `${scrollPercent}%`;
+        scrollProgressBar.setAttribute('aria-valuenow', Math.round(scrollPercent));
+      }
+
+      if (siteHeader) {
+        if (scrollTop > 40) {
+          siteHeader.classList.add('scrolled');
+        } else {
+          siteHeader.classList.remove('scrolled');
+        }
+      }
+    }, { passive: true });
+  }
+
+  // ----------------------------------------------------------------------------
+  // 4. Hero Dynamic Role Switcher / Typewriter
+  // ----------------------------------------------------------------------------
+  function initHeroRoleSwitcher() {
+    if (!heroRoleEl) return;
+
+    const roles = [
+      'Aspiring Software Developer',
+      '1st Year MCA Student',
+      'Web Application Creator',
+      'Relational DB Enthusiast',
+      'Disciplined Problem Solver'
+    ];
+
+    let currentRoleIdx = 0;
+    let currentCharIdx = 0;
+    let isDeleting = false;
+    let typingSpeed = 80;
+
+    function typeLoop() {
+      const fullText = roles[currentRoleIdx];
+
+      if (isDeleting) {
+        heroRoleEl.textContent = fullText.substring(0, currentCharIdx - 1);
+        currentCharIdx--;
+        typingSpeed = 40;
+      } else {
+        heroRoleEl.textContent = fullText.substring(0, currentCharIdx + 1);
+        currentCharIdx++;
+        typingSpeed = 85;
+      }
+
+      if (!isDeleting && currentCharIdx === fullText.length) {
+        // Pause at end of word
+        typingSpeed = 2200;
+        isDeleting = true;
+      } else if (isDeleting && currentCharIdx === 0) {
+        isDeleting = false;
+        currentRoleIdx = (currentRoleIdx + 1) % roles.length;
+        typingSpeed = 400;
+      }
+
+      setTimeout(typeLoop, typingSpeed);
+    }
+
+    setTimeout(typeLoop, 800);
+  }
+
+  // ----------------------------------------------------------------------------
+  // 5. Scroll-Triggered Reveal Animations
+  // ----------------------------------------------------------------------------
+  function initScrollReveals() {
+    const revealElements = document.querySelectorAll('.reveal-fade-up');
+    if (!revealElements.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      revealElements.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    revealElements.forEach((el) => {
+      revealObserver.observe(el);
+    });
+  }
+
+  function triggerInitialReveals() {
+    // Reveal top hero elements immediately once preloader is gone
+    const heroElements = document.querySelectorAll('#hero .reveal-fade-up');
+    heroElements.forEach((el) => {
+      el.classList.add('is-visible');
+    });
+  }
+
+  // ----------------------------------------------------------------------------
+  // 6. Skill Proficiency Meters Animation
+  // ----------------------------------------------------------------------------
+  function initSkillMeters() {
+    const meterFills = document.querySelectorAll('.skill-bar-fill');
+    if (!meterFills.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      meterFills.forEach((fill) => {
+        fill.style.width = fill.getAttribute('data-level-width') || '50%';
+      });
+      return;
+    }
+
+    const meterObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const fill = entry.target;
+            const targetWidth = fill.getAttribute('data-level-width') || '50%';
+            fill.style.width = targetWidth;
+            observer.unobserve(fill);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    meterFills.forEach((fill) => {
+      meterObserver.observe(fill);
+    });
+  }
+
+  // ----------------------------------------------------------------------------
+  // 7. Active Navigation Spy via IntersectionObserver
+  // ----------------------------------------------------------------------------
+  function initScrollSpy() {
+    if (!('IntersectionObserver' in window)) return;
+
+    const spyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach((link) => {
+              const href = link.getAttribute('href');
+              if (href === `#${id}`) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      },
+      {
+        rootMargin: '-25% 0px -65% 0px',
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => {
+      spyObserver.observe(section);
+    });
+  }
+
+  // ----------------------------------------------------------------------------
+  // 8. Project Filtering Tabs
+  // ----------------------------------------------------------------------------
+  function initProjectFilters() {
+    if (!filterTabs.length || !projectItems.length) return;
+
+    filterTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const targetCategory = tab.getAttribute('data-filter');
+
+        filterTabs.forEach((t) => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        projectItems.forEach((card) => {
+          const cardCategories = card.getAttribute('data-category') || '';
+          if (targetCategory === 'all' || cardCategories.includes(targetCategory)) {
+            card.style.display = 'grid';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 20);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(12px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 250);
+          }
+        });
+      });
+    });
+  }
+
+  // ----------------------------------------------------------------------------
+  // 9. Theme Management (Default Dark per Request, with Toggle)
   // ----------------------------------------------------------------------------
   function initTheme() {
     const savedTheme = localStorage.getItem('vaishnavi_portfolio_theme');
     if (savedTheme) {
       applyTheme(savedTheme);
     } else {
-      // Default to Light Theme
-      applyTheme('light');
+      // Default to Dark Theme
+      applyTheme('dark');
     }
 
     if (themeToggleBtn) {
@@ -65,157 +380,57 @@
   }
 
   function toggleTheme() {
-    const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     applyTheme(newTheme);
     showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Light'} Mode`);
   }
 
   // ----------------------------------------------------------------------------
-  // 2. Mobile Drawer Navigation
+  // 10. Mobile Drawer Navigation
   // ----------------------------------------------------------------------------
-  function openDrawer() {
-    if (mobileDrawer && drawerBackdrop) {
-      mobileDrawer.classList.add('open');
-      drawerBackdrop.classList.add('open');
-      mobileMenuBtn.setAttribute('aria-expanded', 'true');
-      drawerBackdrop.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeDrawer() {
-    if (mobileDrawer && drawerBackdrop) {
-      mobileDrawer.classList.remove('open');
-      drawerBackdrop.classList.remove('open');
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      drawerBackdrop.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  }
-
-  if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', openDrawer);
-  }
-
-  if (drawerCloseBtn) {
-    drawerCloseBtn.addEventListener('click', closeDrawer);
-  }
-
-  if (drawerBackdrop) {
-    drawerBackdrop.addEventListener('click', closeDrawer);
-  }
-
-  // Close drawer on clicking any navigation link
-  navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      closeDrawer();
-    });
-  });
-
-  // ----------------------------------------------------------------------------
-  // 3. Active Nav Link on Scroll via IntersectionObserver
-  // ----------------------------------------------------------------------------
-  function setupScrollSpy() {
-    if (!('IntersectionObserver' in window)) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const currentId = entry.target.getAttribute('id');
-          navLinks.forEach((link) => {
-            const href = link.getAttribute('href');
-            if (href === `#${currentId}`) {
-              link.classList.add('active');
-            } else {
-              link.classList.remove('active');
-            }
-          });
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  }
-
-  // ----------------------------------------------------------------------------
-  // 4. Skill Proficiency Meters Animation
-  // ----------------------------------------------------------------------------
-  function animateSkillMeters() {
-    const meters = document.querySelectorAll('.skill-bar-fill');
-    if (!('IntersectionObserver' in window)) {
-      meters.forEach((meter) => {
-        const val = meter.getAttribute('data-level-width') || '50%';
-        meter.style.width = val;
-      });
-      return;
+  function initMobileDrawer() {
+    function openDrawer() {
+      if (mobileDrawer && drawerBackdrop) {
+        mobileDrawer.classList.add('open');
+        drawerBackdrop.classList.add('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        drawerBackdrop.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
-    const meterObserver = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const meter = entry.target;
-            const targetWidth = meter.getAttribute('data-level-width') || '50%';
-            meter.style.width = targetWidth;
-            obs.unobserve(meter);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+    function closeDrawer() {
+      if (mobileDrawer && drawerBackdrop) {
+        mobileDrawer.classList.remove('open');
+        drawerBackdrop.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        drawerBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
 
-    meters.forEach((meter) => {
-      meter.style.width = '0%';
-      meterObserver.observe(meter);
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', openDrawer);
+    }
+
+    if (drawerCloseBtn) {
+      drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+
+    if (drawerBackdrop) {
+      drawerBackdrop.addEventListener('click', closeDrawer);
+    }
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', closeDrawer);
     });
   }
 
   // ----------------------------------------------------------------------------
-  // 5. Project Filtering Tabs
+  // 11. Copy to Clipboard Utility with Toast
   // ----------------------------------------------------------------------------
-  function setupProjectFilters() {
-    if (!filterTabs.length) return;
-
-    filterTabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const targetCategory = tab.getAttribute('data-filter');
-
-        filterTabs.forEach((t) => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        projectCards.forEach((card) => {
-          const cardCategories = card.getAttribute('data-category') || '';
-          if (targetCategory === 'all' || cardCategories.includes(targetCategory)) {
-            card.style.display = 'block';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            }, 20);
-          } else {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(8px)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 200);
-          }
-        });
-      });
-    });
-  }
-
-  // ----------------------------------------------------------------------------
-  // 6. Copy to Clipboard Utility with Toast
-  // ----------------------------------------------------------------------------
-  function setupCopyButtons() {
+  function initCopyButtons() {
     copyButtons.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -274,27 +489,26 @@
   }
 
   // ----------------------------------------------------------------------------
-  // 7. Modals (Project Details & Resume)
+  // 12. Modals (Project Details & Printable CV)
   // ----------------------------------------------------------------------------
-  function openModal(modalElement) {
-    if (!modalElement) return;
-    modalElement.classList.add('open');
-    modalElement.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+  function initModals() {
+    function openModal(modalElement) {
+      if (!modalElement) return;
+      modalElement.classList.add('open');
+      modalElement.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
 
-    // Focus close button for accessibility
-    const closeBtn = modalElement.querySelector('.modal-close-btn');
-    if (closeBtn) closeBtn.focus();
-  }
+      const closeBtn = modalElement.querySelector('.modal-close-btn');
+      if (closeBtn) closeBtn.focus();
+    }
 
-  function closeModal(modalElement) {
-    if (!modalElement) return;
-    modalElement.classList.remove('open');
-    modalElement.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
+    function closeModal(modalElement) {
+      if (!modalElement) return;
+      modalElement.classList.remove('open');
+      modalElement.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
 
-  function setupModals() {
     // Open Project Modal
     openProjectModalBtns.forEach((btn) => {
       btn.addEventListener('click', (e) => {
@@ -323,7 +537,7 @@
       });
     }
 
-    // Print Resume
+    // Print Resume Button
     if (printResumeBtn) {
       printResumeBtn.addEventListener('click', () => {
         window.print();
@@ -345,15 +559,14 @@
       if (e.key === 'Escape') {
         closeModal(projectModal);
         closeModal(resumeModal);
-        closeDrawer();
       }
     });
   }
 
   // ----------------------------------------------------------------------------
-  // 8. Contact Form Handling
+  // 13. Contact Form Submission
   // ----------------------------------------------------------------------------
-  function setupContactForm() {
+  function initContactForm() {
     if (!contactForm) return;
 
     contactForm.addEventListener('submit', (e) => {
@@ -366,7 +579,7 @@
 
       const name = nameInput ? nameInput.value.trim() : '';
       const email = emailInput ? emailInput.value.trim() : '';
-      const subject = subjectInput ? subjectInput.value.trim() : 'Portfolio Inquiry';
+      const subject = subjectInput ? subjectInput.value.trim() : 'Software Engineering Opportunity / Inquiry';
       const message = messageInput ? messageInput.value.trim() : '';
 
       if (!name || !email || !message) {
@@ -374,21 +587,19 @@
         return;
       }
 
-      // Generate mailto link
+      // Pre-formatted mailto URL
       const emailTo = 'vdalavi005@gmail.com';
       const mailtoUrl = `mailto:${emailTo}?subject=${encodeURIComponent(
-        `[Portfolio] ${subject} - from ${name}`
+        `[Portfolio] ${subject} - ${name}`
       )}&body=${encodeURIComponent(
         `Hello Vaishnavi,\n\n${message}\n\nFrom:\n${name}\nEmail: ${email}`
       )}`;
 
-      // Open email client
       window.location.href = mailtoUrl;
 
-      // Show success visual feedback
       if (formStatus) {
-        formStatus.className = 'form-notice-box success';
-        formStatus.textContent = 'Your default email client has been opened with your prefilled message. Thank you!';
+        formStatus.className = 'form-status-msg success';
+        formStatus.textContent = 'Opening your email client to dispatch your note. Thank you for connecting!';
         formStatus.style.display = 'block';
 
         setTimeout(() => {
@@ -397,14 +608,14 @@
       }
 
       contactForm.reset();
-      showToast('Opening your email app to send message...');
+      showToast('Opening email app...');
     });
   }
 
   // ----------------------------------------------------------------------------
-  // 9. Back to Top Button & Footer
+  // 14. Back to Top Button & Footer Date
   // ----------------------------------------------------------------------------
-  function setupBackToTop() {
+  function initFooter() {
     if (backToTopBtn) {
       backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
@@ -421,16 +632,22 @@
   }
 
   // ----------------------------------------------------------------------------
-  // Initialization
+  // Master Initialization
   // ----------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
+    initPreloader();
     initTheme();
-    setupScrollSpy();
-    animateSkillMeters();
-    setupProjectFilters();
-    setupCopyButtons();
-    setupModals();
-    setupContactForm();
-    setupBackToTop();
+    initCustomCursor();
+    initScrollProgress();
+    initHeroRoleSwitcher();
+    initScrollReveals();
+    initSkillMeters();
+    initScrollSpy();
+    initProjectFilters();
+    initMobileDrawer();
+    initCopyButtons();
+    initModals();
+    initContactForm();
+    initFooter();
   });
 })();

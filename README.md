@@ -1,29 +1,35 @@
-# Vaishnavi M Dalavi — Developer Portfolio Website
+# Vaishnavi M Dalavi — Premium Developer Portfolio
 
-A fast, accessible, responsive personal developer portfolio website for **Vaishnavi M Dalavi**, 1st year MCA student at **Poornaprajna Institute of Management (PIM)**, Udupi, Karnataka.
+A modern, premium, animated developer portfolio website for **Vaishnavi M Dalavi**, 1st-year MCA student at **Poornaprajna Institute of Management (PIM)**, Udupi, Karnataka.
 
-Built strictly using standard **HTML5, CSS3, and vanilla JavaScript** with zero external runtime dependencies.
+Inspired by the visual design style, generous editorial layout, micro-interactions, and animations of **Hudson**, tailored uniquely to showcase Vaishnavi's authentic academic rigor, technical competencies, and real projects.
+
+Live Deployment: [vaishnavi-d.vercel.app](https://vaishnavi-d.vercel.app/)  
+GitHub Repository: [github.com/vaishnavidalavi05/portfolio](https://github.com/vaishnavidalavi05/portfolio)
 
 ---
 
-## 🚀 Key Features
+## ✨ Design Architecture & Visual Style
 
-- **Modern Developer Aesthetic:** Built with the **Orange & Charcoal** color scheme (`#EA580C` / `#F97316` and dark charcoal neutrals).
-- **Default Appearance Mode:** Light Theme with dynamic **Dark / Light theme switcher** that persists in `localStorage`.
-- **Text-Focused Hero Showcase:** Prominently highlights the headline *"1st year MCA student Aspiring software Developer"*, location badge, institution badge, and primary calls-to-action.
-- **Accurate & Verified Expertise Badges:** Strictly adheres to verified skill self-evaluations across:
-  - **Core Programming:** Python (Basic), Java (Basic)
-  - **Web Fundamentals:** HTML5 (Basic), CSS3 (Beginner), JavaScript (Beginner)
-  - **Backend:** Flask (Beginner)
-  - **Databases:** SQLite (Beginner), MySQL (Beginner)
-  - **Tools:** GitHub (Basic), VS Code (Beginner), NumPy (Basic)
-  - **Core CS:** OOP (Basic), Data Structures & Algorithms (Beginner)
-- **Real Project Showcase:** Detailed feature showcase for the **Catering Management System**, covering the problem solved, tech stack, and key engineering contributions (interactive menu & cart, admin dashboard, SQLite integration, automated billing with GST and discounts).
-- **Interactive Project & Resume Modals:**
-  - In-depth architectural modal for the project.
-  - Recruiter-ready printable resume modal with a one-click **Print / Save as PDF** feature (`@media print` optimized).
-- **Contact & Social Network:** Working direct email mailto links, one-click copy buttons for email and phone with toast feedback, and direct verified links to GitHub and LinkedIn.
-- **Fully Responsive & Accessible:** WCAG 2.1 AA compliant, semantic markup, visible focus outlines, screen-reader friendly attributes, and responsive mobile navigation drawer.
+- **Dark Obsidian & Radiant Ember Palette:** Built on deep obsidian black (`#09090C`), rich charcoal cards (`#14141B` / `#1B1B25`), crisp white typography (`#F8FAFC`), and subtle ember orange accents (`#FF6B2B` / `#F97316`).
+- **Editorial Typography Scale:** Uses **Syne** for bold display headings, **Plus Jakarta Sans** for body text, and **Space Grotesk** for code and technical tags.
+- **Hudson Asymmetric Editorial Layout:** Clean layout with generous spacing, prominent indices (`00`, `01`, `02`), and asymmetric project cards.
+- **Subtle Theme Switcher:** Features a smooth dark/light mode toggle with preference persistence in `localStorage`.
+
+---
+
+## 🎬 Animations & Interactive Features
+
+1. **Smooth Preloader Screen:** Minimalist monogram countdown (`00%` &rarr; `100%`) with progress bar and seamless reveal.
+2. **Scroll Progress Indicator:** Real-time gradient progress bar at the top of the viewport.
+3. **Interactive Custom Cursor:** Smooth lagging circular cursor with hover scale on interactive elements (automatically disabled on mobile/touch).
+4. **Hero Dynamic Role Typewriter:** Rotates through key identities (*Aspiring Software Developer*, *1st Year MCA Student*, *Web Application Creator*, *Relational DB Enthusiast*).
+5. **Scroll-Triggered Reveals:** IntersectionObserver triggers smooth fade-up transitions for sections and cards.
+6. **Animated Underline Navigation:** Sticky glassmorphic navbar with dynamic sliding indicator on hover and scrollspy tracking.
+7. **Interactive Skills Bento:** Animated progress meters that fill smoothly when scrolled into view, with verified evaluation standards.
+8. **Asymmetric Project Showcase:** Interactive browser mockup frame simulating the live Catering Management System admin dashboard with real-time billing calculations.
+9. **Interactive Modals:** Detailed project specs modal and a printable resume modal with a 1-click **Print / Save as PDF** feature.
+10. **One-Click Clipboard Touchpoints:** Instant copy buttons for email (`vdalavi005@gmail.com`) and phone (`+91 7899420886`) with toast feedback.
 
 ---
 
@@ -31,31 +37,25 @@ Built strictly using standard **HTML5, CSS3, and vanilla JavaScript** with zero 
 
 ```text
 c:\Users\vdala\resume\
-├── index.html          # Main HTML5 document with complete semantic hierarchy
+├── index.html          # Semantic HTML5 document with Hudson editorial sections
 ├── css\
-│   └── style.css       # Custom properties, Orange & Charcoal theme, responsive layout, print styles
+│   └── style.css       # Obsidian dark theme, design tokens, micro-interactions, print styles
 ├── js\
-│   └── main.js         # Theme toggle, drawer navigation, scroll spy, filtering, clipboard, modals
+│   └── main.js         # Preloader, cursor, scroll progress, typewriter, filters, modals
 ├── assets\             # Directory for assets and icons
+├── .gitignore          # Git ignore rules
 └── README.md           # Documentation and preview instructions
 ```
 
 ---
 
-## 💻 How to View & Preview Locally
+## 💻 How to Preview Locally
 
-You can open `index.html` directly in any web browser (Google Chrome, Microsoft Edge, Mozilla Firefox) or run a local lightweight Python web server:
+Open `index.html` directly in any modern browser, or launch a lightweight local server:
 
 ```bash
-# In this directory (c:\Users\vdala\resume):
+# In the project directory:
 python -m http.server 8080
 ```
 
 Then visit [http://localhost:8080](http://localhost:8080) in your web browser.
-
----
-
-## 🌐 Free Deployment Options
-
-- **GitHub Pages:** Push this folder to a GitHub repository named `vaishnavidalavi.github.io` (or enable GitHub Pages under repository Settings > Pages).
-- **Vercel / Netlify:** Drag-and-drop the project folder to deploy in seconds.
